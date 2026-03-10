@@ -1,0 +1,1868 @@
+
+> test:all
+> npm run test:backend && npm run test:frontend
+
+
+> test:backend
+> cd backend && npx jest --config ./jest.config.cjs --detectOpenHandles --runInBand --verbose
+
+  console.log
+    [CSRF DEBUG] /api/csrf-token/token GET
+
+      at log (src/routes/csrf.js:12:11)
+
+  console.log
+    [CSRF DEBUG] Incoming Cookie header:
+
+      at log (src/routes/csrf.js:13:11)
+
+  console.log
+    [CSRF DEBUG] Parsed cookies: [Object: null prototype] {}
+
+      at log (src/routes/csrf.js:14:11)
+
+  console.log
+    [CSRF DEBUG] Issued CSRF token: SRasVusk-sRxszSXmI586PbGdcsXCny5sGtk
+
+      at log (src/routes/csrf.js:17:11)
+
+  console.log
+    [CSRF DEBUG] POST /api/chits/create
+
+      at log (src/app.js:107:17)
+
+  console.log
+    [CSRF DEBUG] Cookie header: _csrf=maKCw1MHYSlLAToxUNoItYDa
+
+      at log (src/app.js:108:17)
+
+  console.log
+    [CSRF DEBUG] x-csrf-token header: SRasVusk-sRxszSXmI586PbGdcsXCny5sGtk
+
+      at log (src/app.js:109:17)
+
+  console.log
+    [CSRF DEBUG] Parsed cookies: { _csrf: 'maKCw1MHYSlLAToxUNoItYDa' }
+
+      at log (src/app.js:110:17)
+
+  console.log
+    [CSRF DEBUG] Raw headers: {
+      host: '127.0.0.1:56229',
+      'accept-encoding': 'gzip, deflate',
+      'content-type': 'application/json',
+      cookie: '_csrf=maKCw1MHYSlLAToxUNoItYDa',
+      'x-csrf-token': 'SRasVusk-sRxszSXmI586PbGdcsXCny5sGtk',
+      'content-length': '51',
+      connection: 'close'
+    }
+
+      at log (src/app.js:111:17)
+
+  console.log
+    [CSRF DEBUG] POST /api/chits/invalid-id/join
+
+      at log (src/app.js:107:17)
+
+  console.log
+    [CSRF DEBUG] Cookie header: _csrf=maKCw1MHYSlLAToxUNoItYDa
+
+      at log (src/app.js:108:17)
+
+  console.log
+    [CSRF DEBUG] x-csrf-token header: SRasVusk-sRxszSXmI586PbGdcsXCny5sGtk
+
+      at log (src/app.js:109:17)
+
+  console.log
+    [CSRF DEBUG] Parsed cookies: { _csrf: 'maKCw1MHYSlLAToxUNoItYDa' }
+
+      at log (src/app.js:110:17)
+
+  console.log
+    [CSRF DEBUG] Raw headers: {
+      host: '127.0.0.1:56229',
+      'accept-encoding': 'gzip, deflate',
+      cookie: '_csrf=maKCw1MHYSlLAToxUNoItYDa',
+      'x-csrf-token': 'SRasVusk-sRxszSXmI586PbGdcsXCny5sGtk',
+      connection: 'close',
+      'content-length': '0'
+    }
+
+      at log (src/app.js:111:17)
+
+  console.error
+    Error handler called with invalid res object: <ref *2> IncomingMessage {
+      _events: {
+        close: undefined,
+        error: undefined,
+        data: undefined,
+        end: undefined,
+        readable: undefined
+      },
+      _readableState: ReadableState {
+        highWaterMark: 65536,
+        buffer: [],
+        bufferIndex: 0,
+        length: 0,
+        pipes: [],
+        awaitDrainWriters: null,
+        Symbol(kState): 1315596
+      },
+      _maxListeners: undefined,
+      socket: <ref *1> Socket {
+        connecting: false,
+        _hadError: false,
+        _parent: null,
+        _host: null,
+        _closeAfterHandlingError: false,
+        _events: {
+          close: [Array],
+          error: [Function: socketOnError],
+          prefinish: undefined,
+          finish: undefined,
+          drain: [Function: bound socketOnDrain],
+          data: [Function: bound socketOnData],
+          end: [Array],
+          readable: undefined,
+          timeout: [Function: socketOnTimeout],
+          resume: [Function: onSocketResume],
+          pause: [Function: onSocketPause]
+        },
+        _readableState: ReadableState {
+          highWaterMark: 65536,
+          buffer: [],
+          bufferIndex: 0,
+          length: 0,
+          pipes: [],
+          awaitDrainWriters: null,
+          Symbol(kState): 193997060
+        },
+        _writableState: WritableState {
+          highWaterMark: 65536,
+          length: 0,
+          corked: 0,
+          onwrite: [Function: bound onwrite],
+          writelen: 0,
+          bufferedIndex: 0,
+          pendingcb: 0,
+          Symbol(kState): 17564420,
+          Symbol(kBufferedValue): null
+        },
+        allowHalfOpen: true,
+        _maxListeners: undefined,
+        _eventsCount: 8,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: Server {
+          maxHeaderSize: undefined,
+          insecureHTTPParser: undefined,
+          requestTimeout: 300000,
+          headersTimeout: 60000,
+          keepAliveTimeout: 5000,
+          keepAliveTimeoutBuffer: 1000,
+          connectionsCheckingInterval: 30000,
+          requireHostHeader: true,
+          joinDuplicateHeaders: undefined,
+          rejectNonStandardBodyWrites: false,
+          shouldUpgradeCallback: [Function (anonymous)],
+          _events: [Object: null prototype],
+          _eventsCount: 3,
+          _maxListeners: undefined,
+          _connections: 1,
+          _handle: [TCP],
+          _usingWorkers: false,
+          _workers: [],
+          _unref: false,
+          _listeningId: 2,
+          allowHalfOpen: true,
+          pauseOnConnect: false,
+          noDelay: true,
+          keepAlive: false,
+          keepAliveInitialDelay: 0,
+          highWaterMark: 65536,
+          httpAllowHalfOpen: false,
+          timeout: 0,
+          maxHeadersCount: null,
+          maxRequestsPerSocket: 0,
+          _connectionKey: '6::::0',
+          Symbol(IncomingMessage): [Function: IncomingMessage],
+          Symbol(ServerResponse): [Function: ServerResponse],
+          Symbol(OptimizeEmptyRequestsOption): false,
+          Symbol(shapeMode): false,
+          Symbol(kCapture): false,
+          Symbol(async_id_symbol): 550,
+          Symbol(kUniqueHeaders): null,
+          Symbol(http.server.connections): ConnectionsList {},
+          Symbol(http.server.connectionsCheckingInterval): Timeout {
+            _idleTimeout: 30000,
+            _idlePrev: [TimersList],
+            _idleNext: [TimersList],
+            _idleStart: 766,
+            _onTimeout: [Function: bound checkConnections],
+            _timerArgs: undefined,
+            _repeat: 30000,
+            _destroyed: false,
+            Symbol(refed): false,
+            Symbol(kHasPrimitive): false,
+            Symbol(asyncId): 556,
+            Symbol(triggerId): 551,
+            Symbol(kAsyncContextFrame): undefined
+          }
+        },
+        _server: Server {
+          maxHeaderSize: undefined,
+          insecureHTTPParser: undefined,
+          requestTimeout: 300000,
+          headersTimeout: 60000,
+          keepAliveTimeout: 5000,
+          keepAliveTimeoutBuffer: 1000,
+          connectionsCheckingInterval: 30000,
+          requireHostHeader: true,
+          joinDuplicateHeaders: undefined,
+          rejectNonStandardBodyWrites: false,
+          shouldUpgradeCallback: [Function (anonymous)],
+          _events: [Object: null prototype],
+          _eventsCount: 3,
+          _maxListeners: undefined,
+          _connections: 1,
+          _handle: [TCP],
+          _usingWorkers: false,
+          _workers: [],
+          _unref: false,
+          _listeningId: 2,
+          allowHalfOpen: true,
+          pauseOnConnect: false,
+          noDelay: true,
+          keepAlive: false,
+          keepAliveInitialDelay: 0,
+          highWaterMark: 65536,
+          httpAllowHalfOpen: false,
+          timeout: 0,
+          maxHeadersCount: null,
+          maxRequestsPerSocket: 0,
+          _connectionKey: '6::::0',
+          Symbol(IncomingMessage): [Function: IncomingMessage],
+          Symbol(ServerResponse): [Function: ServerResponse],
+          Symbol(OptimizeEmptyRequestsOption): false,
+          Symbol(shapeMode): false,
+          Symbol(kCapture): false,
+          Symbol(async_id_symbol): 550,
+          Symbol(kUniqueHeaders): null,
+          Symbol(http.server.connections): ConnectionsList {},
+          Symbol(http.server.connectionsCheckingInterval): Timeout {
+            _idleTimeout: 30000,
+            _idlePrev: [TimersList],
+            _idleNext: [TimersList],
+            _idleStart: 766,
+            _onTimeout: [Function: bound checkConnections],
+            _timerArgs: undefined,
+            _repeat: 30000,
+            _destroyed: false,
+            Symbol(refed): false,
+            Symbol(kHasPrimitive): false,
+            Symbol(asyncId): 556,
+            Symbol(triggerId): 551,
+            Symbol(kAsyncContextFrame): undefined
+          }
+        },
+        parser: HTTPParser {
+          '0': null,
+          '1': [Function: parserOnHeaders],
+          '2': [Function: parserOnHeadersComplete],
+          '3': [Function: parserOnBody],
+          '4': [Function: parserOnMessageComplete],
+          '5': [Function: bound onParserExecute],
+          '6': [Function: bound onParserTimeout],
+          _headers: [],
+          _url: '',
+          socket: [Circular *1],
+          incoming: [Circular *2],
+          outgoing: null,
+          maxHeaderPairs: 2000,
+          _consumed: true,
+          onIncoming: [Function: bound parserOnIncoming],
+          joinDuplicateHeaders: null,
+          Symbol(resource_symbol): [HTTPServerAsyncResource]
+        },
+        on: [Function: socketListenerWrap],
+        addListener: [Function: socketListenerWrap],
+        prependListener: [Function: socketListenerWrap],
+        setEncoding: [Function: socketSetEncoding],
+        _paused: false,
+        _httpMessage: ServerResponse {
+          _events: [Object: null prototype],
+          _eventsCount: 1,
+          _maxListeners: undefined,
+          outputData: [],
+          outputSize: 0,
+          writable: true,
+          destroyed: false,
+          _last: false,
+          chunkedEncoding: false,
+          shouldKeepAlive: false,
+          maxRequestsOnConnectionReached: false,
+          _defaultKeepAlive: true,
+          useChunkedEncodingByDefault: true,
+          sendDate: true,
+          _removedConnection: false,
+          _removedContLen: false,
+          _removedTE: false,
+          strictContentLength: false,
+          _contentLength: null,
+          _hasBody: true,
+          _trailer: '',
+          finished: false,
+          _headerSent: false,
+          _closed: false,
+          _header: null,
+          _keepAliveTimeout: 5000,
+          _onPendingData: [Function: bound updateOutgoingData],
+          req: [Circular *2],
+          _sent100: false,
+          _expect_continue: false,
+          _maxRequestsPerSocket: 0,
+          locals: [Object: null prototype] {},
+          cookie: [Function (anonymous)],
+          Symbol(shapeMode): false,
+          Symbol(kCapture): false,
+          Symbol(kBytesWritten): 0,
+          Symbol(kNeedDrain): false,
+          Symbol(corked): 0,
+          Symbol(kChunkedBuffer): [],
+          Symbol(kChunkedLength): 0,
+          Symbol(kSocket): [Circular *1],
+          Symbol(kOutHeaders): [Object: null prototype],
+          Symbol(errored): null,
+          Symbol(kHighWaterMark): 65536,
+          Symbol(kRejectNonStandardBodyWrites): false,
+          Symbol(kUniqueHeaders): null
+        },
+        _peername: { address: '::ffff:127.0.0.1', family: 'IPv6', port: 56242 },
+        Symbol(async_id_symbol): 2903,
+        Symbol(kHandle): TCP {
+          reading: true,
+          onconnection: null,
+          _consumed: true,
+          Symbol(owner_symbol): [Circular *1]
+        },
+        Symbol(lastWriteQueueSize): 0,
+        Symbol(timeout): null,
+        Symbol(kBuffer): null,
+        Symbol(kBufferCb): null,
+        Symbol(kBufferGen): null,
+        Symbol(shapeMode): true,
+        Symbol(kCapture): false,
+        Symbol(kSetNoDelay): true,
+        Symbol(kSetKeepAlive): false,
+        Symbol(kSetKeepAliveInitialDelay): 0,
+        Symbol(kBytesRead): 0,
+        Symbol(kBytesWritten): 0
+      },
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [
+        'Host',
+        '127.0.0.1:56229',
+        'Accept-Encoding',
+        'gzip, deflate',
+        'Cookie',
+        '_csrf=maKCw1MHYSlLAToxUNoItYDa',
+        'Connection',
+        'close'
+      ],
+      rawTrailers: [],
+      joinDuplicateHeaders: null,
+      aborted: false,
+      upgrade: false,
+      url: '/api/chits/pending-join-requests',
+      method: 'GET',
+      statusCode: null,
+      statusMessage: null,
+      client: <ref *1> Socket {
+        connecting: false,
+        _hadError: false,
+        _parent: null,
+        _host: null,
+        _closeAfterHandlingError: false,
+        _events: {
+          close: [Array],
+          error: [Function: socketOnError],
+          prefinish: undefined,
+          finish: undefined,
+          drain: [Function: bound socketOnDrain],
+          data: [Function: bound socketOnData],
+          end: [Array],
+          readable: undefined,
+          timeout: [Function: socketOnTimeout],
+          resume: [Function: onSocketResume],
+          pause: [Function: onSocketPause]
+        },
+        _readableState: ReadableState {
+          highWaterMark: 65536,
+          buffer: [],
+          bufferIndex: 0,
+          length: 0,
+          pipes: [],
+          awaitDrainWriters: null,
+          Symbol(kState): 193997060
+        },
+        _writableState: WritableState {
+          highWaterMark: 65536,
+          length: 0,
+          corked: 0,
+          onwrite: [Function: bound onwrite],
+          writelen: 0,
+          bufferedIndex: 0,
+          pendingcb: 0,
+          Symbol(kState): 17564420,
+          Symbol(kBufferedValue): null
+        },
+        allowHalfOpen: true,
+        _maxListeners: undefined,
+        _eventsCount: 8,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: Server {
+          maxHeaderSize: undefined,
+          insecureHTTPParser: undefined,
+          requestTimeout: 300000,
+          headersTimeout: 60000,
+          keepAliveTimeout: 5000,
+          keepAliveTimeoutBuffer: 1000,
+          connectionsCheckingInterval: 30000,
+          requireHostHeader: true,
+          joinDuplicateHeaders: undefined,
+          rejectNonStandardBodyWrites: false,
+          shouldUpgradeCallback: [Function (anonymous)],
+          _events: [Object: null prototype],
+          _eventsCount: 3,
+          _maxListeners: undefined,
+          _connections: 1,
+          _handle: [TCP],
+          _usingWorkers: false,
+          _workers: [],
+          _unref: false,
+          _listeningId: 2,
+          allowHalfOpen: true,
+          pauseOnConnect: false,
+          noDelay: true,
+          keepAlive: false,
+          keepAliveInitialDelay: 0,
+          highWaterMark: 65536,
+          httpAllowHalfOpen: false,
+          timeout: 0,
+          maxHeadersCount: null,
+          maxRequestsPerSocket: 0,
+          _connectionKey: '6::::0',
+          Symbol(IncomingMessage): [Function: IncomingMessage],
+          Symbol(ServerResponse): [Function: ServerResponse],
+          Symbol(OptimizeEmptyRequestsOption): false,
+          Symbol(shapeMode): false,
+          Symbol(kCapture): false,
+          Symbol(async_id_symbol): 550,
+          Symbol(kUniqueHeaders): null,
+          Symbol(http.server.connections): ConnectionsList {},
+          Symbol(http.server.connectionsCheckingInterval): Timeout {
+            _idleTimeout: 30000,
+            _idlePrev: [TimersList],
+            _idleNext: [TimersList],
+            _idleStart: 766,
+            _onTimeout: [Function: bound checkConnections],
+            _timerArgs: undefined,
+            _repeat: 30000,
+            _destroyed: false,
+            Symbol(refed): false,
+            Symbol(kHasPrimitive): false,
+            Symbol(asyncId): 556,
+            Symbol(triggerId): 551,
+            Symbol(kAsyncContextFrame): undefined
+          }
+        },
+        _server: Server {
+          maxHeaderSize: undefined,
+          insecureHTTPParser: undefined,
+          requestTimeout: 300000,
+          headersTimeout: 60000,
+          keepAliveTimeout: 5000,
+          keepAliveTimeoutBuffer: 1000,
+          connectionsCheckingInterval: 30000,
+          requireHostHeader: true,
+          joinDuplicateHeaders: undefined,
+          rejectNonStandardBodyWrites: false,
+          shouldUpgradeCallback: [Function (anonymous)],
+          _events: [Object: null prototype],
+          _eventsCount: 3,
+          _maxListeners: undefined,
+          _connections: 1,
+          _handle: [TCP],
+          _usingWorkers: false,
+          _workers: [],
+          _unref: false,
+          _listeningId: 2,
+          allowHalfOpen: true,
+          pauseOnConnect: false,
+          noDelay: true,
+          keepAlive: false,
+          keepAliveInitialDelay: 0,
+          highWaterMark: 65536,
+          httpAllowHalfOpen: false,
+          timeout: 0,
+          maxHeadersCount: null,
+          maxRequestsPerSocket: 0,
+          _connectionKey: '6::::0',
+          Symbol(IncomingMessage): [Function: IncomingMessage],
+          Symbol(ServerResponse): [Function: ServerResponse],
+          Symbol(OptimizeEmptyRequestsOption): false,
+          Symbol(shapeMode): false,
+          Symbol(kCapture): false,
+          Symbol(async_id_symbol): 550,
+          Symbol(kUniqueHeaders): null,
+          Symbol(http.server.connections): ConnectionsList {},
+          Symbol(http.server.connectionsCheckingInterval): Timeout {
+            _idleTimeout: 30000,
+            _idlePrev: [TimersList],
+            _idleNext: [TimersList],
+            _idleStart: 766,
+            _onTimeout: [Function: bound checkConnections],
+            _timerArgs: undefined,
+            _repeat: 30000,
+            _destroyed: false,
+            Symbol(refed): false,
+            Symbol(kHasPrimitive): false,
+            Symbol(asyncId): 556,
+            Symbol(triggerId): 551,
+            Symbol(kAsyncContextFrame): undefined
+          }
+        },
+        parser: HTTPParser {
+          '0': null,
+          '1': [Function: parserOnHeaders],
+          '2': [Function: parserOnHeadersComplete],
+          '3': [Function: parserOnBody],
+          '4': [Function: parserOnMessageComplete],
+          '5': [Function: bound onParserExecute],
+          '6': [Function: bound onParserTimeout],
+          _headers: [],
+          _url: '',
+          socket: [Circular *1],
+          incoming: [Circular *2],
+          outgoing: null,
+          maxHeaderPairs: 2000,
+          _consumed: true,
+          onIncoming: [Function: bound parserOnIncoming],
+          joinDuplicateHeaders: null,
+          Symbol(resource_symbol): [HTTPServerAsyncResource]
+        },
+        on: [Function: socketListenerWrap],
+        addListener: [Function: socketListenerWrap],
+        prependListener: [Function: socketListenerWrap],
+        setEncoding: [Function: socketSetEncoding],
+        _paused: false,
+        _httpMessage: ServerResponse {
+          _events: [Object: null prototype],
+          _eventsCount: 1,
+          _maxListeners: undefined,
+          outputData: [],
+          outputSize: 0,
+          writable: true,
+          destroyed: false,
+          _last: false,
+          chunkedEncoding: false,
+          shouldKeepAlive: false,
+          maxRequestsOnConnectionReached: false,
+          _defaultKeepAlive: true,
+          useChunkedEncodingByDefault: true,
+          sendDate: true,
+          _removedConnection: false,
+          _removedContLen: false,
+          _removedTE: false,
+          strictContentLength: false,
+          _contentLength: null,
+          _hasBody: true,
+          _trailer: '',
+          finished: false,
+          _headerSent: false,
+          _closed: false,
+          _header: null,
+          _keepAliveTimeout: 5000,
+          _onPendingData: [Function: bound updateOutgoingData],
+          req: [Circular *2],
+          _sent100: false,
+          _expect_continue: false,
+          _maxRequestsPerSocket: 0,
+          locals: [Object: null prototype] {},
+          cookie: [Function (anonymous)],
+          Symbol(shapeMode): false,
+          Symbol(kCapture): false,
+          Symbol(kBytesWritten): 0,
+          Symbol(kNeedDrain): false,
+          Symbol(corked): 0,
+          Symbol(kChunkedBuffer): [],
+          Symbol(kChunkedLength): 0,
+          Symbol(kSocket): [Circular *1],
+          Symbol(kOutHeaders): [Object: null prototype],
+          Symbol(errored): null,
+          Symbol(kHighWaterMark): 65536,
+          Symbol(kRejectNonStandardBodyWrites): false,
+          Symbol(kUniqueHeaders): null
+        },
+        _peername: { address: '::ffff:127.0.0.1', family: 'IPv6', port: 56242 },
+        Symbol(async_id_symbol): 2903,
+        Symbol(kHandle): TCP {
+          reading: true,
+          onconnection: null,
+          _consumed: true,
+          Symbol(owner_symbol): [Circular *1]
+        },
+        Symbol(lastWriteQueueSize): 0,
+        Symbol(timeout): null,
+        Symbol(kBuffer): null,
+        Symbol(kBufferCb): null,
+        Symbol(kBufferGen): null,
+        Symbol(shapeMode): true,
+        Symbol(kCapture): false,
+        Symbol(kSetNoDelay): true,
+        Symbol(kSetKeepAlive): false,
+        Symbol(kSetKeepAliveInitialDelay): 0,
+        Symbol(kBytesRead): 0,
+        Symbol(kBytesWritten): 0
+      },
+      _consuming: false,
+      _dumped: false,
+      next: [Function: next],
+      baseUrl: '',
+      originalUrl: '/api/chits/pending-join-requests',
+      _parsedUrl: Url {
+        protocol: null,
+        slashes: null,
+        auth: null,
+        host: null,
+        port: null,
+        hostname: null,
+        hash: null,
+        search: null,
+        query: null,
+        pathname: '/api/chits/pending-join-requests',
+        path: '/api/chits/pending-join-requests',
+        href: '/api/chits/pending-join-requests',
+        _raw: '/api/chits/pending-join-requests'
+      },
+      params: {},
+      query: {},
+      res: <ref *3> ServerResponse {
+        _events: [Object: null prototype] { finish: [Function: bound resOnFinish] },
+        _eventsCount: 1,
+        _maxListeners: undefined,
+        outputData: [],
+        outputSize: 0,
+        writable: true,
+        destroyed: false,
+        _last: false,
+        chunkedEncoding: false,
+        shouldKeepAlive: false,
+        maxRequestsOnConnectionReached: false,
+        _defaultKeepAlive: true,
+        useChunkedEncodingByDefault: true,
+        sendDate: true,
+        _removedConnection: false,
+        _removedContLen: false,
+        _removedTE: false,
+        strictContentLength: false,
+        _contentLength: null,
+        _hasBody: true,
+        _trailer: '',
+        finished: false,
+        _headerSent: false,
+        _closed: false,
+        _header: null,
+        _keepAliveTimeout: 5000,
+        _onPendingData: [Function: bound updateOutgoingData],
+        req: [Circular *2],
+        _sent100: false,
+        _expect_continue: false,
+        _maxRequestsPerSocket: 0,
+        locals: [Object: null prototype] {},
+        cookie: [Function (anonymous)],
+        Symbol(shapeMode): false,
+        Symbol(kCapture): false,
+        Symbol(kBytesWritten): 0,
+        Symbol(kNeedDrain): false,
+        Symbol(corked): 0,
+        Symbol(kChunkedBuffer): [],
+        Symbol(kChunkedLength): 0,
+        Symbol(kSocket): <ref *1> Socket {
+          connecting: false,
+          _hadError: false,
+          _parent: null,
+          _host: null,
+          _closeAfterHandlingError: false,
+          _events: [Object],
+          _readableState: [ReadableState],
+          _writableState: [WritableState],
+          allowHalfOpen: true,
+          _maxListeners: undefined,
+          _eventsCount: 8,
+          _sockname: null,
+          _pendingData: null,
+          _pendingEncoding: '',
+          server: [Server],
+          _server: [Server],
+          parser: [HTTPParser],
+          on: [Function: socketListenerWrap],
+          addListener: [Function: socketListenerWrap],
+          prependListener: [Function: socketListenerWrap],
+          setEncoding: [Function: socketSetEncoding],
+          _paused: false,
+          _httpMessage: [Circular *3],
+          _peername: [Object],
+          Symbol(async_id_symbol): 2903,
+          Symbol(kHandle): [TCP],
+          Symbol(lastWriteQueueSize): 0,
+          Symbol(timeout): null,
+          Symbol(kBuffer): null,
+          Symbol(kBufferCb): null,
+          Symbol(kBufferGen): null,
+          Symbol(shapeMode): true,
+          Symbol(kCapture): false,
+          Symbol(kSetNoDelay): true,
+          Symbol(kSetKeepAlive): false,
+          Symbol(kSetKeepAliveInitialDelay): 0,
+          Symbol(kBytesRead): 0,
+          Symbol(kBytesWritten): 0
+        },
+        Symbol(kOutHeaders): [Object: null prototype] {
+          'content-security-policy': [Array],
+          'cross-origin-opener-policy': [Array],
+          'cross-origin-resource-policy': [Array],
+          'origin-agent-cluster': [Array],
+          'referrer-policy': [Array],
+          'strict-transport-security': [Array],
+          'x-content-type-options': [Array],
+          'x-dns-prefetch-control': [Array],
+          'x-download-options': [Array],
+          'x-frame-options': [Array],
+          'x-permitted-cross-domain-policies': [Array],
+          'x-xss-protection': [Array],
+          'access-control-allow-origin': [Array],
+          'ratelimit-policy': [Array],
+          'ratelimit-limit': [Array],
+          'ratelimit-remaining': [Array],
+          'ratelimit-reset': [Array]
+        },
+        Symbol(errored): null,
+        Symbol(kHighWaterMark): 65536,
+        Symbol(kRejectNonStandardBodyWrites): false,
+        Symbol(kUniqueHeaders): null
+      },
+      secret: undefined,
+      cookies: { _csrf: 'maKCw1MHYSlLAToxUNoItYDa' },
+      signedCookies: [Object: null prototype] {},
+      body: undefined,
+      rateLimit: {
+        limit: 100,
+        used: 11,
+        remaining: 89,
+        resetTime: 2026-03-04T07:40:35.549Z,
+        key: '::/56'
+      },
+      csrfToken: [Function: csrfToken],
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): {
+        host: '127.0.0.1:56229',
+        'accept-encoding': 'gzip, deflate',
+        cookie: '_csrf=maKCw1MHYSlLAToxUNoItYDa',
+        connection: 'close'
+      },
+      Symbol(kHeadersCount): 8,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0
+    }
+
+      76 |   } else {
+      77 |     // Fallback for non-Express or test environments
+    > 78 |     console.error('Error handler called with invalid res object:', err);
+         |             ^
+      79 |   }
+      80 | };
+      81 |
+
+      at error (src/middleware/errorHandler.js:78:13)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:328:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at router.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at node_modules/express/lib/router/index.js:646:15
+      at next (node_modules/express/lib/router/index.js:265:14)
+      at router.handle (node_modules/express/lib/router/index.js:175:3)
+      at router (node_modules/express/lib/router/index.js:47:12)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:328:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at router.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at next (src/app.js:113:5)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:328:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at router.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at csrf (node_modules/csurf/index.js:117:5)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:328:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at router.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at next (src/app.js:85:5)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:328:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at router.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at node_modules/express-rate-limit/dist/index.cjs:942:7
+      at node_modules/express-rate-limit/dist/index.cjs:825:5
+
+  console.error
+    Error handler called with invalid res object: <ref *2> IncomingMessage {
+      _events: {
+        close: undefined,
+        error: undefined,
+        data: undefined,
+        end: undefined,
+        readable: undefined
+      },
+      _readableState: ReadableState {
+        highWaterMark: 65536,
+        buffer: [],
+        bufferIndex: 0,
+        length: 0,
+        pipes: [],
+        awaitDrainWriters: null,
+        Symbol(kState): 1315596
+      },
+      _maxListeners: undefined,
+      socket: <ref *1> Socket {
+        connecting: false,
+        _hadError: false,
+        _parent: null,
+        _host: null,
+        _closeAfterHandlingError: false,
+        _events: {
+          close: [Array],
+          error: [Function: socketOnError],
+          prefinish: undefined,
+          finish: undefined,
+          drain: [Function: bound socketOnDrain],
+          data: [Function: bound socketOnData],
+          end: [Array],
+          readable: undefined,
+          timeout: [Function: socketOnTimeout],
+          resume: [Function: onSocketResume],
+          pause: [Function: onSocketPause]
+        },
+        _readableState: ReadableState {
+          highWaterMark: 65536,
+          buffer: [],
+          bufferIndex: 0,
+          length: 0,
+          pipes: [],
+          awaitDrainWriters: null,
+          Symbol(kState): 193997060
+        },
+        _writableState: WritableState {
+          highWaterMark: 65536,
+          length: 0,
+          corked: 0,
+          onwrite: [Function: bound onwrite],
+          writelen: 0,
+          bufferedIndex: 0,
+          pendingcb: 0,
+          Symbol(kState): 17564420,
+          Symbol(kBufferedValue): null
+        },
+        allowHalfOpen: true,
+        _maxListeners: undefined,
+        _eventsCount: 8,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: Server {
+          maxHeaderSize: undefined,
+          insecureHTTPParser: undefined,
+          requestTimeout: 300000,
+          headersTimeout: 60000,
+          keepAliveTimeout: 5000,
+          keepAliveTimeoutBuffer: 1000,
+          connectionsCheckingInterval: 30000,
+          requireHostHeader: true,
+          joinDuplicateHeaders: undefined,
+          rejectNonStandardBodyWrites: false,
+          shouldUpgradeCallback: [Function (anonymous)],
+          _events: [Object: null prototype],
+          _eventsCount: 3,
+          _maxListeners: undefined,
+          _connections: 2,
+          _handle: [TCP],
+          _usingWorkers: false,
+          _workers: [],
+          _unref: false,
+          _listeningId: 2,
+          allowHalfOpen: true,
+          pauseOnConnect: false,
+          noDelay: true,
+          keepAlive: false,
+          keepAliveInitialDelay: 0,
+          highWaterMark: 65536,
+          httpAllowHalfOpen: false,
+          timeout: 0,
+          maxHeadersCount: null,
+          maxRequestsPerSocket: 0,
+          _connectionKey: '6::::0',
+          Symbol(IncomingMessage): [Function: IncomingMessage],
+          Symbol(ServerResponse): [Function: ServerResponse],
+          Symbol(OptimizeEmptyRequestsOption): false,
+          Symbol(shapeMode): false,
+          Symbol(kCapture): false,
+          Symbol(async_id_symbol): 550,
+          Symbol(kUniqueHeaders): null,
+          Symbol(http.server.connections): ConnectionsList {},
+          Symbol(http.server.connectionsCheckingInterval): Timeout {
+            _idleTimeout: 30000,
+            _idlePrev: [TimersList],
+            _idleNext: [TimersList],
+            _idleStart: 766,
+            _onTimeout: [Function: bound checkConnections],
+            _timerArgs: undefined,
+            _repeat: 30000,
+            _destroyed: false,
+            Symbol(refed): false,
+            Symbol(kHasPrimitive): false,
+            Symbol(asyncId): 556,
+            Symbol(triggerId): 551,
+            Symbol(kAsyncContextFrame): undefined
+          }
+        },
+        _server: Server {
+          maxHeaderSize: undefined,
+          insecureHTTPParser: undefined,
+          requestTimeout: 300000,
+          headersTimeout: 60000,
+          keepAliveTimeout: 5000,
+          keepAliveTimeoutBuffer: 1000,
+          connectionsCheckingInterval: 30000,
+          requireHostHeader: true,
+          joinDuplicateHeaders: undefined,
+          rejectNonStandardBodyWrites: false,
+          shouldUpgradeCallback: [Function (anonymous)],
+          _events: [Object: null prototype],
+          _eventsCount: 3,
+          _maxListeners: undefined,
+          _connections: 2,
+          _handle: [TCP],
+          _usingWorkers: false,
+          _workers: [],
+          _unref: false,
+          _listeningId: 2,
+          allowHalfOpen: true,
+          pauseOnConnect: false,
+          noDelay: true,
+          keepAlive: false,
+          keepAliveInitialDelay: 0,
+          highWaterMark: 65536,
+          httpAllowHalfOpen: false,
+          timeout: 0,
+          maxHeadersCount: null,
+          maxRequestsPerSocket: 0,
+          _connectionKey: '6::::0',
+          Symbol(IncomingMessage): [Function: IncomingMessage],
+          Symbol(ServerResponse): [Function: ServerResponse],
+          Symbol(OptimizeEmptyRequestsOption): false,
+          Symbol(shapeMode): false,
+          Symbol(kCapture): false,
+          Symbol(async_id_symbol): 550,
+          Symbol(kUniqueHeaders): null,
+          Symbol(http.server.connections): ConnectionsList {},
+          Symbol(http.server.connectionsCheckingInterval): Timeout {
+            _idleTimeout: 30000,
+            _idlePrev: [TimersList],
+            _idleNext: [TimersList],
+            _idleStart: 766,
+            _onTimeout: [Function: bound checkConnections],
+            _timerArgs: undefined,
+            _repeat: 30000,
+            _destroyed: false,
+            Symbol(refed): false,
+            Symbol(kHasPrimitive): false,
+            Symbol(asyncId): 556,
+            Symbol(triggerId): 551,
+            Symbol(kAsyncContextFrame): undefined
+          }
+        },
+        parser: HTTPParser {
+          '0': null,
+          '1': [Function: parserOnHeaders],
+          '2': [Function: parserOnHeadersComplete],
+          '3': [Function: parserOnBody],
+          '4': [Function: parserOnMessageComplete],
+          '5': [Function: bound onParserExecute],
+          '6': [Function: bound onParserTimeout],
+          _headers: [],
+          _url: '',
+          socket: [Circular *1],
+          incoming: [Circular *2],
+          outgoing: null,
+          maxHeaderPairs: 2000,
+          _consumed: true,
+          onIncoming: [Function: bound parserOnIncoming],
+          joinDuplicateHeaders: null,
+          Symbol(resource_symbol): [HTTPServerAsyncResource]
+        },
+        on: [Function: socketListenerWrap],
+        addListener: [Function: socketListenerWrap],
+        prependListener: [Function: socketListenerWrap],
+        setEncoding: [Function: socketSetEncoding],
+        _paused: false,
+        _httpMessage: ServerResponse {
+          _events: [Object: null prototype],
+          _eventsCount: 1,
+          _maxListeners: undefined,
+          outputData: [],
+          outputSize: 0,
+          writable: true,
+          destroyed: false,
+          _last: false,
+          chunkedEncoding: false,
+          shouldKeepAlive: false,
+          maxRequestsOnConnectionReached: false,
+          _defaultKeepAlive: true,
+          useChunkedEncodingByDefault: true,
+          sendDate: true,
+          _removedConnection: false,
+          _removedContLen: false,
+          _removedTE: false,
+          strictContentLength: false,
+          _contentLength: null,
+          _hasBody: true,
+          _trailer: '',
+          finished: false,
+          _headerSent: false,
+          _closed: false,
+          _header: null,
+          _keepAliveTimeout: 5000,
+          _onPendingData: [Function: bound updateOutgoingData],
+          req: [Circular *2],
+          _sent100: false,
+          _expect_continue: false,
+          _maxRequestsPerSocket: 0,
+          locals: [Object: null prototype] {},
+          cookie: [Function (anonymous)],
+          Symbol(shapeMode): false,
+          Symbol(kCapture): false,
+          Symbol(kBytesWritten): 0,
+          Symbol(kNeedDrain): false,
+          Symbol(corked): 0,
+          Symbol(kChunkedBuffer): [],
+          Symbol(kChunkedLength): 0,
+          Symbol(kSocket): [Circular *1],
+          Symbol(kOutHeaders): [Object: null prototype],
+          Symbol(errored): null,
+          Symbol(kHighWaterMark): 65536,
+          Symbol(kRejectNonStandardBodyWrites): false,
+          Symbol(kUniqueHeaders): null
+        },
+        _peername: { address: '::ffff:127.0.0.1', family: 'IPv6', port: 56244 },
+        Symbol(async_id_symbol): 3339,
+        Symbol(kHandle): TCP {
+          reading: true,
+          onconnection: null,
+          _consumed: true,
+          Symbol(owner_symbol): [Circular *1]
+        },
+        Symbol(lastWriteQueueSize): 0,
+        Symbol(timeout): null,
+        Symbol(kBuffer): null,
+        Symbol(kBufferCb): null,
+        Symbol(kBufferGen): null,
+        Symbol(shapeMode): true,
+        Symbol(kCapture): false,
+        Symbol(kSetNoDelay): true,
+        Symbol(kSetKeepAlive): false,
+        Symbol(kSetKeepAliveInitialDelay): 0,
+        Symbol(kBytesRead): 0,
+        Symbol(kBytesWritten): 0
+      },
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [
+        'Host',
+        '127.0.0.1:56229',
+        'Accept-Encoding',
+        'gzip, deflate',
+        'Cookie',
+        '_csrf=maKCw1MHYSlLAToxUNoItYDa',
+        'Connection',
+        'close'
+      ],
+      rawTrailers: [],
+      joinDuplicateHeaders: null,
+      aborted: false,
+      upgrade: false,
+      url: '/api/chits/crud/list',
+      method: 'GET',
+      statusCode: null,
+      statusMessage: null,
+      client: <ref *1> Socket {
+        connecting: false,
+        _hadError: false,
+        _parent: null,
+        _host: null,
+        _closeAfterHandlingError: false,
+        _events: {
+          close: [Array],
+          error: [Function: socketOnError],
+          prefinish: undefined,
+          finish: undefined,
+          drain: [Function: bound socketOnDrain],
+          data: [Function: bound socketOnData],
+          end: [Array],
+          readable: undefined,
+          timeout: [Function: socketOnTimeout],
+          resume: [Function: onSocketResume],
+          pause: [Function: onSocketPause]
+        },
+        _readableState: ReadableState {
+          highWaterMark: 65536,
+          buffer: [],
+          bufferIndex: 0,
+          length: 0,
+          pipes: [],
+          awaitDrainWriters: null,
+          Symbol(kState): 193997060
+        },
+        _writableState: WritableState {
+          highWaterMark: 65536,
+          length: 0,
+          corked: 0,
+          onwrite: [Function: bound onwrite],
+          writelen: 0,
+          bufferedIndex: 0,
+          pendingcb: 0,
+          Symbol(kState): 17564420,
+          Symbol(kBufferedValue): null
+        },
+        allowHalfOpen: true,
+        _maxListeners: undefined,
+        _eventsCount: 8,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: Server {
+          maxHeaderSize: undefined,
+          insecureHTTPParser: undefined,
+          requestTimeout: 300000,
+          headersTimeout: 60000,
+          keepAliveTimeout: 5000,
+          keepAliveTimeoutBuffer: 1000,
+          connectionsCheckingInterval: 30000,
+          requireHostHeader: true,
+          joinDuplicateHeaders: undefined,
+          rejectNonStandardBodyWrites: false,
+          shouldUpgradeCallback: [Function (anonymous)],
+          _events: [Object: null prototype],
+          _eventsCount: 3,
+          _maxListeners: undefined,
+          _connections: 2,
+          _handle: [TCP],
+          _usingWorkers: false,
+          _workers: [],
+          _unref: false,
+          _listeningId: 2,
+          allowHalfOpen: true,
+          pauseOnConnect: false,
+          noDelay: true,
+          keepAlive: false,
+          keepAliveInitialDelay: 0,
+          highWaterMark: 65536,
+          httpAllowHalfOpen: false,
+          timeout: 0,
+          maxHeadersCount: null,
+          maxRequestsPerSocket: 0,
+          _connectionKey: '6::::0',
+          Symbol(IncomingMessage): [Function: IncomingMessage],
+          Symbol(ServerResponse): [Function: ServerResponse],
+          Symbol(OptimizeEmptyRequestsOption): false,
+          Symbol(shapeMode): false,
+          Symbol(kCapture): false,
+          Symbol(async_id_symbol): 550,
+          Symbol(kUniqueHeaders): null,
+          Symbol(http.server.connections): ConnectionsList {},
+          Symbol(http.server.connectionsCheckingInterval): Timeout {
+            _idleTimeout: 30000,
+            _idlePrev: [TimersList],
+            _idleNext: [TimersList],
+            _idleStart: 766,
+            _onTimeout: [Function: bound checkConnections],
+            _timerArgs: undefined,
+            _repeat: 30000,
+            _destroyed: false,
+            Symbol(refed): false,
+            Symbol(kHasPrimitive): false,
+            Symbol(asyncId): 556,
+            Symbol(triggerId): 551,
+            Symbol(kAsyncContextFrame): undefined
+          }
+        },
+        _server: Server {
+          maxHeaderSize: undefined,
+          insecureHTTPParser: undefined,
+          requestTimeout: 300000,
+          headersTimeout: 60000,
+          keepAliveTimeout: 5000,
+          keepAliveTimeoutBuffer: 1000,
+          connectionsCheckingInterval: 30000,
+          requireHostHeader: true,
+          joinDuplicateHeaders: undefined,
+          rejectNonStandardBodyWrites: false,
+          shouldUpgradeCallback: [Function (anonymous)],
+          _events: [Object: null prototype],
+          _eventsCount: 3,
+          _maxListeners: undefined,
+          _connections: 2,
+          _handle: [TCP],
+          _usingWorkers: false,
+          _workers: [],
+          _unref: false,
+          _listeningId: 2,
+          allowHalfOpen: true,
+          pauseOnConnect: false,
+          noDelay: true,
+          keepAlive: false,
+          keepAliveInitialDelay: 0,
+          highWaterMark: 65536,
+          httpAllowHalfOpen: false,
+          timeout: 0,
+          maxHeadersCount: null,
+          maxRequestsPerSocket: 0,
+          _connectionKey: '6::::0',
+          Symbol(IncomingMessage): [Function: IncomingMessage],
+          Symbol(ServerResponse): [Function: ServerResponse],
+          Symbol(OptimizeEmptyRequestsOption): false,
+          Symbol(shapeMode): false,
+          Symbol(kCapture): false,
+          Symbol(async_id_symbol): 550,
+          Symbol(kUniqueHeaders): null,
+          Symbol(http.server.connections): ConnectionsList {},
+          Symbol(http.server.connectionsCheckingInterval): Timeout {
+            _idleTimeout: 30000,
+            _idlePrev: [TimersList],
+            _idleNext: [TimersList],
+            _idleStart: 766,
+            _onTimeout: [Function: bound checkConnections],
+            _timerArgs: undefined,
+            _repeat: 30000,
+            _destroyed: false,
+            Symbol(refed): false,
+            Symbol(kHasPrimitive): false,
+            Symbol(asyncId): 556,
+            Symbol(triggerId): 551,
+            Symbol(kAsyncContextFrame): undefined
+          }
+        },
+        parser: HTTPParser {
+          '0': null,
+          '1': [Function: parserOnHeaders],
+          '2': [Function: parserOnHeadersComplete],
+          '3': [Function: parserOnBody],
+          '4': [Function: parserOnMessageComplete],
+          '5': [Function: bound onParserExecute],
+          '6': [Function: bound onParserTimeout],
+          _headers: [],
+          _url: '',
+          socket: [Circular *1],
+          incoming: [Circular *2],
+          outgoing: null,
+          maxHeaderPairs: 2000,
+          _consumed: true,
+          onIncoming: [Function: bound parserOnIncoming],
+          joinDuplicateHeaders: null,
+          Symbol(resource_symbol): [HTTPServerAsyncResource]
+        },
+        on: [Function: socketListenerWrap],
+        addListener: [Function: socketListenerWrap],
+        prependListener: [Function: socketListenerWrap],
+        setEncoding: [Function: socketSetEncoding],
+        _paused: false,
+        _httpMessage: ServerResponse {
+          _events: [Object: null prototype],
+          _eventsCount: 1,
+          _maxListeners: undefined,
+          outputData: [],
+          outputSize: 0,
+          writable: true,
+          destroyed: false,
+          _last: false,
+          chunkedEncoding: false,
+          shouldKeepAlive: false,
+          maxRequestsOnConnectionReached: false,
+          _defaultKeepAlive: true,
+          useChunkedEncodingByDefault: true,
+          sendDate: true,
+          _removedConnection: false,
+          _removedContLen: false,
+          _removedTE: false,
+          strictContentLength: false,
+          _contentLength: null,
+          _hasBody: true,
+          _trailer: '',
+          finished: false,
+          _headerSent: false,
+          _closed: false,
+          _header: null,
+          _keepAliveTimeout: 5000,
+          _onPendingData: [Function: bound updateOutgoingData],
+          req: [Circular *2],
+          _sent100: false,
+          _expect_continue: false,
+          _maxRequestsPerSocket: 0,
+          locals: [Object: null prototype] {},
+          cookie: [Function (anonymous)],
+          Symbol(shapeMode): false,
+          Symbol(kCapture): false,
+          Symbol(kBytesWritten): 0,
+          Symbol(kNeedDrain): false,
+          Symbol(corked): 0,
+          Symbol(kChunkedBuffer): [],
+          Symbol(kChunkedLength): 0,
+          Symbol(kSocket): [Circular *1],
+          Symbol(kOutHeaders): [Object: null prototype],
+          Symbol(errored): null,
+          Symbol(kHighWaterMark): 65536,
+          Symbol(kRejectNonStandardBodyWrites): false,
+          Symbol(kUniqueHeaders): null
+        },
+        _peername: { address: '::ffff:127.0.0.1', family: 'IPv6', port: 56244 },
+        Symbol(async_id_symbol): 3339,
+        Symbol(kHandle): TCP {
+          reading: true,
+          onconnection: null,
+          _consumed: true,
+          Symbol(owner_symbol): [Circular *1]
+        },
+        Symbol(lastWriteQueueSize): 0,
+        Symbol(timeout): null,
+        Symbol(kBuffer): null,
+        Symbol(kBufferCb): null,
+        Symbol(kBufferGen): null,
+        Symbol(shapeMode): true,
+        Symbol(kCapture): false,
+        Symbol(kSetNoDelay): true,
+        Symbol(kSetKeepAlive): false,
+        Symbol(kSetKeepAliveInitialDelay): 0,
+        Symbol(kBytesRead): 0,
+        Symbol(kBytesWritten): 0
+      },
+      _consuming: false,
+      _dumped: false,
+      next: [Function: next],
+      baseUrl: '',
+      originalUrl: '/api/chits/crud/list',
+      _parsedUrl: Url {
+        protocol: null,
+        slashes: null,
+        auth: null,
+        host: null,
+        port: null,
+        hostname: null,
+        hash: null,
+        search: null,
+        query: null,
+        pathname: '/api/chits/crud/list',
+        path: '/api/chits/crud/list',
+        href: '/api/chits/crud/list',
+        _raw: '/api/chits/crud/list'
+      },
+      params: {},
+      query: {},
+      res: <ref *3> ServerResponse {
+        _events: [Object: null prototype] { finish: [Function: bound resOnFinish] },
+        _eventsCount: 1,
+        _maxListeners: undefined,
+        outputData: [],
+        outputSize: 0,
+        writable: true,
+        destroyed: false,
+        _last: false,
+        chunkedEncoding: false,
+        shouldKeepAlive: false,
+        maxRequestsOnConnectionReached: false,
+        _defaultKeepAlive: true,
+        useChunkedEncodingByDefault: true,
+        sendDate: true,
+        _removedConnection: false,
+        _removedContLen: false,
+        _removedTE: false,
+        strictContentLength: false,
+        _contentLength: null,
+        _hasBody: true,
+        _trailer: '',
+        finished: false,
+        _headerSent: false,
+        _closed: false,
+        _header: null,
+        _keepAliveTimeout: 5000,
+        _onPendingData: [Function: bound updateOutgoingData],
+        req: [Circular *2],
+        _sent100: false,
+        _expect_continue: false,
+        _maxRequestsPerSocket: 0,
+        locals: [Object: null prototype] {},
+        cookie: [Function (anonymous)],
+        Symbol(shapeMode): false,
+        Symbol(kCapture): false,
+        Symbol(kBytesWritten): 0,
+        Symbol(kNeedDrain): false,
+        Symbol(corked): 0,
+        Symbol(kChunkedBuffer): [],
+        Symbol(kChunkedLength): 0,
+        Symbol(kSocket): <ref *1> Socket {
+          connecting: false,
+          _hadError: false,
+          _parent: null,
+          _host: null,
+          _closeAfterHandlingError: false,
+          _events: [Object],
+          _readableState: [ReadableState],
+          _writableState: [WritableState],
+          allowHalfOpen: true,
+          _maxListeners: undefined,
+          _eventsCount: 8,
+          _sockname: null,
+          _pendingData: null,
+          _pendingEncoding: '',
+          server: [Server],
+          _server: [Server],
+          parser: [HTTPParser],
+          on: [Function: socketListenerWrap],
+          addListener: [Function: socketListenerWrap],
+          prependListener: [Function: socketListenerWrap],
+          setEncoding: [Function: socketSetEncoding],
+          _paused: false,
+          _httpMessage: [Circular *3],
+          _peername: [Object],
+          Symbol(async_id_symbol): 3339,
+          Symbol(kHandle): [TCP],
+          Symbol(lastWriteQueueSize): 0,
+          Symbol(timeout): null,
+          Symbol(kBuffer): null,
+          Symbol(kBufferCb): null,
+          Symbol(kBufferGen): null,
+          Symbol(shapeMode): true,
+          Symbol(kCapture): false,
+          Symbol(kSetNoDelay): true,
+          Symbol(kSetKeepAlive): false,
+          Symbol(kSetKeepAliveInitialDelay): 0,
+          Symbol(kBytesRead): 0,
+          Symbol(kBytesWritten): 0
+        },
+        Symbol(kOutHeaders): [Object: null prototype] {
+          'content-security-policy': [Array],
+          'cross-origin-opener-policy': [Array],
+          'cross-origin-resource-policy': [Array],
+          'origin-agent-cluster': [Array],
+          'referrer-policy': [Array],
+          'strict-transport-security': [Array],
+          'x-content-type-options': [Array],
+          'x-dns-prefetch-control': [Array],
+          'x-download-options': [Array],
+          'x-frame-options': [Array],
+          'x-permitted-cross-domain-policies': [Array],
+          'x-xss-protection': [Array],
+          'access-control-allow-origin': [Array],
+          'ratelimit-policy': [Array],
+          'ratelimit-limit': [Array],
+          'ratelimit-remaining': [Array],
+          'ratelimit-reset': [Array]
+        },
+        Symbol(errored): null,
+        Symbol(kHighWaterMark): 65536,
+        Symbol(kRejectNonStandardBodyWrites): false,
+        Symbol(kUniqueHeaders): null
+      },
+      secret: undefined,
+      cookies: { _csrf: 'maKCw1MHYSlLAToxUNoItYDa' },
+      signedCookies: [Object: null prototype] {},
+      body: undefined,
+      rateLimit: {
+        limit: 100,
+        used: 13,
+        remaining: 87,
+        resetTime: 2026-03-04T07:40:35.549Z,
+        key: '::/56'
+      },
+      csrfToken: [Function: csrfToken],
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): {
+        host: '127.0.0.1:56229',
+        'accept-encoding': 'gzip, deflate',
+        cookie: '_csrf=maKCw1MHYSlLAToxUNoItYDa',
+        connection: 'close'
+      },
+      Symbol(kHeadersCount): 8,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0
+    }
+
+      76 |   } else {
+      77 |     // Fallback for non-Express or test environments
+    > 78 |     console.error('Error handler called with invalid res object:', err);
+         |             ^
+      79 |   }
+      80 | };
+      81 |
+
+      at error (src/middleware/errorHandler.js:78:13)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:328:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at router.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at node_modules/express/lib/router/index.js:646:15
+      at next (node_modules/express/lib/router/index.js:265:14)
+      at router.handle (node_modules/express/lib/router/index.js:175:3)
+      at router (node_modules/express/lib/router/index.js:47:12)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:328:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at router.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at next (src/app.js:113:5)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:328:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at router.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at csrf (node_modules/csurf/index.js:117:5)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:328:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at router.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at next (src/app.js:85:5)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:328:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at router.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at node_modules/express-rate-limit/dist/index.cjs:942:7
+      at node_modules/express-rate-limit/dist/index.cjs:825:5
+
+  console.warn
+    [TEST] Admin registration failed: 403 {}
+
+      238 |
+      239 |     if (registerAdmin.statusCode !== 201) {
+    > 240 |       console.warn('[TEST] Admin registration failed:',
+          |               ^
+      241 |         registerAdmin.statusCode, JSON.stringify(registerAdmin.body));
+      242 |       return; // Skip rest of beforeAll — tests will warn and skip
+      243 |     }
+
+      at Object.warn (src/__tests__/routes.test.js:240:15)
+
+  console.warn
+    [TEST] Skipping — admin session not available
+
+      266 |   it('GET /api/user/me returns authenticated user info', async () => {
+      267 |     if (!adminSessionCookie) {
+    > 268 |       return console.warn('[TEST] Skipping — admin session not available');
+          |                      ^
+      269 |     }
+      270 |     const res = await agent
+      271 |       .get('/api/user/me')
+
+      at Object.warn (src/__tests__/routes.test.js:268:22)
+
+  console.warn
+    [TEST] Skipping — admin session not available
+
+      277 |   it('POST /api/chits/create creates a chit fund when authenticated as admin', async () => {
+      278 |     if (!adminSessionCookie) {
+    > 279 |       return console.warn('[TEST] Skipping — admin session not available');
+          |                      ^
+      280 |     }
+      281 |
+      282 |     // Need fresh CSRF token combined with session cookie
+
+      at Object.warn (src/__tests__/routes.test.js:279:22)
+
+  console.warn
+    [TEST] Skipping — admin session not available
+
+      304 |   it('GET /api/chits/list returns chit funds for authenticated admin', async () => {
+      305 |     if (!adminSessionCookie) {
+    > 306 |       return console.warn('[TEST] Skipping — admin session not available');
+          |                      ^
+      307 |     }
+      308 |     const res = await agent
+      309 |       .get('/api/chits/list')
+
+      at Object.warn (src/__tests__/routes.test.js:306:22)
+
+  console.warn
+    [TEST] Skipping — no chitId available (create test may have failed)
+
+      318 |   it('POST /api/chits/:chitId/join allows member to request joining', async () => {
+      319 |     if (!chitId) {
+    > 320 |       return console.warn('[TEST] Skipping — no chitId available (create test may have failed)');
+          |                      ^
+      321 |     }
+      322 |
+      323 |     // Register member
+
+      at Object.warn (src/__tests__/routes.test.js:320:22)
+
+(node:57659) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+FAIL src/__tests__/routes.test.js (11.694 s)
+  ● User Routes › POST /api/user/register returns 400 for missing fields
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected value: 403
+    Received array: [400, 422]
+
+      100 |       .post('/api/user/register')
+      101 |       .send({});
+    > 102 |     expect([400, 422]).toContain(res.statusCode);
+          |                        ^
+      103 |     expect(res.body).toHaveProperty('success', false);
+      104 |     expect(res.body).toHaveProperty('error');
+      105 |   }, 3000);
+
+      at Object.toContain (src/__tests__/routes.test.js:102:24)
+
+  ● User Routes › POST /api/user/login returns 400 for missing fields
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected value: 403
+    Received array: [400, 401, 422]
+
+      109 |       .post('/api/user/login')
+      110 |       .send({});
+    > 111 |     expect([400, 401, 422]).toContain(res.statusCode);
+          |                             ^
+      112 |     expect(res.body).toHaveProperty('success', false);
+      113 |     expect(res.body).toHaveProperty('error');
+      114 |   }, 3000);
+
+      at Object.toContain (src/__tests__/routes.test.js:111:29)
+
+  ● Chit Fund Routes — Unauthenticated › GET /api/chits/pending-join-requests returns 401 when not authenticated
+
+    thrown: "Exceeded timeout of 3000 ms for a test.
+    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
+
+      166 |   });
+      167 |
+    > 168 |   it('GET /api/chits/pending-join-requests returns 401 when not authenticated', async () => {
+          |   ^
+      169 |     const res = await agent.get('/api/chits/pending-join-requests');
+      170 |     expect([401, 403]).toContain(res.statusCode);
+      171 |     if (res.body) {
+
+      at it (src/__tests__/routes.test.js:168:3)
+      at Object.describe (src/__tests__/routes.test.js:145:1)
+
+  ● Chit CRUD Routes — Unauthenticated › POST /api/chits/crud/create returns 401 for unauthenticated request
+
+    expect(received).toHaveProperty(path)
+
+    Expected path: "error"
+    Received path: []
+
+    Received value: {}
+
+      187 |       expect(typeof res.body).toBe('object');
+      188 |     } else {
+    > 189 |       expect(res.body).toHaveProperty('error');
+          |                        ^
+      190 |     }
+      191 |   }, 3000);
+      192 |
+
+      at Object.toHaveProperty (src/__tests__/routes.test.js:189:24)
+
+  ● Chit CRUD Routes — Unauthenticated › GET /api/chits/crud/list returns 401 for unauthenticated request
+
+    thrown: "Exceeded timeout of 3000 ms for a test.
+    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
+
+      191 |   }, 3000);
+      192 |
+    > 193 |   it('GET /api/chits/crud/list returns 401 for unauthenticated request', async () => {
+          |   ^
+      194 |     // Do not send CSRF or auth headers for unauthenticated test
+      195 |     const res = await agent.get('/api/chits/crud/list');
+      196 |     expect([401, 403]).toContain(res.statusCode);
+
+      at it (src/__tests__/routes.test.js:193:3)
+      at Object.describe (src/__tests__/routes.test.js:178:1)
+
+
+  ● Test suite failed to run
+
+    thrown: "Exceeded timeout of 5000 ms for a hook.
+    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
+
+      49 | });
+      50 |
+    > 51 | afterAll(async () => {
+         | ^
+      52 |   if (server) {
+      53 |     await new Promise((resolve) => server.close(resolve));
+      54 |   }
+
+      at Object.afterAll (src/__tests__/routes.test.js:51:1)
+
+PASS src/__tests__/crudRouter.direct.test.js
+  Business Logic
+    ✓ creates a chit fund with valid input (153 ms)
+    ✓ returns 400 when chit fund name already exists (97 ms)
+    ✓ returns 200 and array for GET /crud/list when user has chit funds (94 ms)
+    ✓ returns 200 and empty array for GET /crud/list when user has no chit funds (77 ms)
+  Security
+    ✓ ignores isAdmin/role in request body (mass assignment protection) (86 ms)
+  Chit CRUD Router (direct)
+    Authentication
+      ✓ POST /crud/create returns 401 for unauthenticated (11 ms)
+      ✓ GET /crud/list returns 401 for unauthenticated (4 ms)
+    Input Validation
+      ✓ returns 400 when all fields missing (6 ms)
+      ✓ returns 400 when name is missing (6 ms)
+      ✓ returns 400 when monthlyAmount is missing (5 ms)
+      ✓ returns 400 when chitsLeft is missing (5 ms)
+      ✓ returns 400 when name is too short (5 ms)
+      ✓ returns 400 when name is too long (11 ms)
+      ✓ returns 400 when monthlyAmount is zero (4 ms)
+      ✓ returns 400 when monthlyAmount is negative (5 ms)
+      ✓ returns 400 when monthlyAmount is not a number (4 ms)
+      ✓ returns 400 when chitsLeft is zero (4 ms)
+      ✓ returns 400 when chitsLeft is negative (5 ms)
+      ✓ returns 400 when chitsLeft is not an integer (4 ms)
+      ✓ returns 201 when extra unexpected fields are present (11 ms)
+      ✓ returns 400 for SQL injection/XSS in name (8 ms)
+      ✓ returns 201 for unicode/emoji in name (15 ms)
+
+PASS src/__tests__/truncateAll.test.js
+  truncateAll script
+    ✓ should truncate all tables and remove all users (265 ms)
+
+PASS src/__tests__/crudRouter.isolated.test.js
+  Isolated CRUD Router
+    ✓ GET /crud/list returns chit funds or error (56 ms)
+    ✓ POST /crud/create returns 400 for missing fields (7 ms)
+
+PASS src/__tests__/routes.integration.test.js
+  Backend Route Tests
+    ✓ GET /api/health should return 200 (25 ms)
+
+PASS src/__tests__/health.test.js
+  Health Route
+    ✓ should return 200 and ok/db status (33 ms)
+
+PASS src/__tests__/migration_users_schema.test.js
+  Users table schema
+    ✓ should have all required columns in Users (25 ms)
+
+PASS src/__tests__/Membership.model.test.js
+  Membership model
+    ✓ should not create membership without required fields (2 ms)
+    ✓ should create membership with required fields (15 ms)
+
+PASS src/__tests__/migration_logs_schema.test.js
+  Logs table schema
+    ✓ should have all required columns in Logs (17 ms)
+
+PASS src/__tests__/migration_schema.test.js
+  ChitFunds table schema
+    ✓ should have a description column in ChitFunds (32 ms)
+
+PASS src/__tests__/migration_memberships_schema.test.js
+  Memberships table schema
+    ✓ should have all required columns in Memberships (16 ms)
+
+FAIL src/__tests__/chitCrudController.test.js
+  chitCrudController
+    createChitFund
+      ✕ should throw error for missing fields (62 ms)
+    listUserChits
+      ✓ should return array of chit funds for user (4 ms)
+
+  ● chitCrudController › createChitFund › should throw error for missing fields
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    Expected: 400
+    Received: 500
+
+    Number of calls: 1
+
+      12 |       const res = { status: jest.fn().mockReturnThis(), json: jest.fn() };
+      13 |       await createChitFund(req, res);
+    > 14 |       expect(res.status).toHaveBeenCalledWith(400);
+         |                          ^
+      15 |       expect(res.json).toHaveBeenCalledWith(expect.objectContaining({ error: expect.any(String) }));
+      16 |     });
+      17 |   });
+
+      at Object.toHaveBeenCalledWith (src/__tests__/chitCrudController.test.js:14:26)
+
+PASS src/__tests__/ChitFund.model.test.js
+  ChitFund model
+    ✓ should not create chit fund without required fields (3 ms)
+    ✓ should create chit fund with required fields (27 ms)
+
+PASS src/__tests__/User.model.test.js
+  User model
+    ✓ should not create user without required fields (10 ms)
+    ✓ should create user with required fields (27 ms)
+
+PASS src/__tests__/Log.model.test.js
+  Log model
+    ✓ should not create log without required fields (2 ms)
+    ✓ should create log with required fields (23 ms)
+
+PASS src/__tests__/chitAdminController.test.js
+  chitAdminController
+    handleRequestAction
+      ✓ should return 400 for missing params (2 ms)
+
+PASS src/__tests__/userController.test.js
+  userController
+    register
+      ✓ should return 400 for missing fields (2 ms)
+
+PASS src/__tests__/logToFile.test.js
+  logToFile utility
+    ✓ should write a log message to the log file (1 ms)
+    ✓ should stringify objects in log (1 ms)
+
+PASS src/__tests__/guid.test.js
+  guid utility
+    ✓ should generate a valid UUID v4 string (1 ms)
+
+Test Suites: 2 failed, 17 passed, 19 total
+Tests:       6 failed, 57 passed, 63 total
+Snapshots:   0 total
+Time:        14.598 s
+Ran all test suites.

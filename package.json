@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "multer": "^2.0.2",
+    "pg": "^8.17.2",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.28.6",
+    "@babel/preset-react": "^7.28.5",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "babel-jest": "^30.2.0",
+    "jest-axe": "^10.0.0",
+    "jest-environment-jsdom": "^30.2.0",
+    "sequelize-cli": "^6.6.5",
+    "whatwg-fetch": "^3.6.20"
+  },
+  "scripts": {
+    "sync-env": "node sync-env.js",
+    "frontend:dev": "npm run sync-env && cd frontend && npm run dev",
+    "frontend:build": "npm run sync-env && cd frontend && npm run build",
+    "test:backend": "cd backend && npx jest --config ./jest.config.cjs --detectOpenHandles --runInBand --verbose",
+    "test:frontend": "cd frontend && npx jest --config ./jest.config.cjs --detectOpenHandles --runInBand --verbose",
+    "test:all": "npm run test:backend && npm run test:frontend",
+    "start-all": "npm run sync-env && ./start-all.sh"
+  }
+}

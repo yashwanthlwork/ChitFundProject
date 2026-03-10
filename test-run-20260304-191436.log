@@ -1,0 +1,871 @@
+
+> test:all
+> npm run test:backend && npm run test:frontend
+
+
+> test:backend
+> cd backend && npx jest --config ./jest.config.cjs --detectOpenHandles --runInBand --verbose
+
+  console.log
+    [CSRF DEBUG] /api/csrf-token/token GET
+
+      at log (src/routes/csrf.js:12:11)
+
+  console.log
+    [CSRF DEBUG] Incoming Cookie header:
+
+      at log (src/routes/csrf.js:13:11)
+
+  console.log
+    [CSRF DEBUG] Parsed cookies: [Object: null prototype] {}
+
+      at log (src/routes/csrf.js:14:11)
+
+  console.log
+    [CSRF DEBUG] Issued CSRF token: WFSUyuYM-iDWlhUPybRCiRAghe023A5sXVOs
+
+      at log (src/routes/csrf.js:17:11)
+
+  console.log
+    [CSRF DEBUG] POST /api/chits/create
+
+      at log (src/app.js:114:17)
+
+  console.log
+    [CSRF DEBUG] Cookie header: _csrf=VxotRnUUsGkUkKTgZ3C9R0dM
+
+      at log (src/app.js:115:17)
+
+  console.log
+    [CSRF DEBUG] x-csrf-token header: WFSUyuYM-iDWlhUPybRCiRAghe023A5sXVOs
+
+      at log (src/app.js:116:17)
+
+  console.log
+    [CSRF DEBUG] Parsed cookies: { _csrf: 'VxotRnUUsGkUkKTgZ3C9R0dM' }
+
+      at log (src/app.js:117:17)
+
+  console.log
+    [CSRF DEBUG] Raw headers: {
+      host: '127.0.0.1:58325',
+      'accept-encoding': 'gzip, deflate',
+      'content-type': 'application/json',
+      cookie: '_csrf=VxotRnUUsGkUkKTgZ3C9R0dM',
+      'x-csrf-token': 'WFSUyuYM-iDWlhUPybRCiRAghe023A5sXVOs',
+      'content-length': '51',
+      connection: 'close'
+    }
+
+      at log (src/app.js:118:17)
+
+  console.log
+    [CSRF DEBUG] POST /api/chits/invalid-id/join
+
+      at log (src/app.js:114:17)
+
+  console.log
+    [CSRF DEBUG] Cookie header: _csrf=VxotRnUUsGkUkKTgZ3C9R0dM
+
+      at log (src/app.js:115:17)
+
+  console.log
+    [CSRF DEBUG] x-csrf-token header: WFSUyuYM-iDWlhUPybRCiRAghe023A5sXVOs
+
+      at log (src/app.js:116:17)
+
+  console.log
+    [CSRF DEBUG] Parsed cookies: { _csrf: 'VxotRnUUsGkUkKTgZ3C9R0dM' }
+
+      at log (src/app.js:117:17)
+
+  console.log
+    [CSRF DEBUG] Raw headers: {
+      host: '127.0.0.1:58325',
+      'accept-encoding': 'gzip, deflate',
+      cookie: '_csrf=VxotRnUUsGkUkKTgZ3C9R0dM',
+      'x-csrf-token': 'WFSUyuYM-iDWlhUPybRCiRAghe023A5sXVOs',
+      connection: 'close',
+      'content-length': '0'
+    }
+
+      at log (src/app.js:118:17)
+
+  console.log
+    [CSRF DEBUG] /api/csrf-token/token GET
+
+      at log (src/routes/csrf.js:12:11)
+
+  console.log
+    [CSRF DEBUG] Incoming Cookie header: session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgzNGViY2E3LTY0ZDQtNDZlYy1hYWU1LWYxMmQxMmU1MGY1YiIsInVzZXJuYW1lIjoiYWRtaW5fMTc3MjYzMTg3ODU2OSIsImlhdCI6MTc3MjYzMTg3OSwiZXhwIjoxNzcyNjMzNjc5fQ.tlwmajY-WSKyNEC4CLB9aQJ2jl6QHo5Z6SE52NCXra4; _csrf=VxotRnUUsGkUkKTgZ3C9R0dM
+
+      at log (src/routes/csrf.js:13:11)
+
+  console.log
+    [CSRF DEBUG] Parsed cookies: {
+      session: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgzNGViY2E3LTY0ZDQtNDZlYy1hYWU1LWYxMmQxMmU1MGY1YiIsInVzZXJuYW1lIjoiYWRtaW5fMTc3MjYzMTg3ODU2OSIsImlhdCI6MTc3MjYzMTg3OSwiZXhwIjoxNzcyNjMzNjc5fQ.tlwmajY-WSKyNEC4CLB9aQJ2jl6QHo5Z6SE52NCXra4',
+      _csrf: 'VxotRnUUsGkUkKTgZ3C9R0dM'
+    }
+
+      at log (src/routes/csrf.js:14:11)
+
+  console.log
+    [CSRF DEBUG] Issued CSRF token: HR2hEf5I-vCwQQb18MezcQ5NVWiQ9tM0nDrM
+
+      at log (src/routes/csrf.js:17:11)
+
+  console.log
+    [CSRF DEBUG] POST /api/chits/create
+
+      at log (src/app.js:114:17)
+
+  console.log
+    [CSRF DEBUG] Cookie header: session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgzNGViY2E3LTY0ZDQtNDZlYy1hYWU1LWYxMmQxMmU1MGY1YiIsInVzZXJuYW1lIjoiYWRtaW5fMTc3MjYzMTg3ODU2OSIsImlhdCI6MTc3MjYzMTg3OSwiZXhwIjoxNzcyNjMzNjc5fQ.tlwmajY-WSKyNEC4CLB9aQJ2jl6QHo5Z6SE52NCXra4; _csrf=VxotRnUUsGkUkKTgZ3C9R0dM
+
+      at log (src/app.js:115:17)
+
+  console.log
+    [CSRF DEBUG] x-csrf-token header: HR2hEf5I-vCwQQb18MezcQ5NVWiQ9tM0nDrM
+
+      at log (src/app.js:116:17)
+
+  console.log
+    [CSRF DEBUG] Parsed cookies: {
+      session: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgzNGViY2E3LTY0ZDQtNDZlYy1hYWU1LWYxMmQxMmU1MGY1YiIsInVzZXJuYW1lIjoiYWRtaW5fMTc3MjYzMTg3ODU2OSIsImlhdCI6MTc3MjYzMTg3OSwiZXhwIjoxNzcyNjMzNjc5fQ.tlwmajY-WSKyNEC4CLB9aQJ2jl6QHo5Z6SE52NCXra4',
+      _csrf: 'VxotRnUUsGkUkKTgZ3C9R0dM'
+    }
+
+      at log (src/app.js:117:17)
+
+  console.log
+    [CSRF DEBUG] Raw headers: {
+      host: '127.0.0.1:58325',
+      'accept-encoding': 'gzip, deflate',
+      cookie: 'session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgzNGViY2E3LTY0ZDQtNDZlYy1hYWU1LWYxMmQxMmU1MGY1YiIsInVzZXJuYW1lIjoiYWRtaW5fMTc3MjYzMTg3ODU2OSIsImlhdCI6MTc3MjYzMTg3OSwiZXhwIjoxNzcyNjMzNjc5fQ.tlwmajY-WSKyNEC4CLB9aQJ2jl6QHo5Z6SE52NCXra4; _csrf=VxotRnUUsGkUkKTgZ3C9R0dM',
+      'x-csrf-token': 'HR2hEf5I-vCwQQb18MezcQ5NVWiQ9tM0nDrM',
+      'content-type': 'application/json',
+      'content-length': '70',
+      connection: 'close'
+    }
+
+      at log (src/app.js:118:17)
+
+  console.log
+    [CSRF DEBUG] /api/csrf-token/token GET
+
+      at log (src/routes/csrf.js:12:11)
+
+  console.log
+    [CSRF DEBUG] Incoming Cookie header: _csrf=VxotRnUUsGkUkKTgZ3C9R0dM; session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJkMDM3ZDYyLWM2ZmEtNDEwNy1hYmM0LWNkMTg3NTBmYWRmNyIsInVzZXJuYW1lIjoibWVtYmVyXzE3NzI2MzE4Nzg1NjkiLCJpYXQiOjE3NzI2MzE4NzksImV4cCI6MTc3MjYzMzY3OX0.8NEn-soSx8rYoIHHmvdk-6oikZAfwf0lmCgch79FbD4
+
+      at log (src/routes/csrf.js:13:11)
+
+  console.log
+    [CSRF DEBUG] Parsed cookies: {
+      _csrf: 'VxotRnUUsGkUkKTgZ3C9R0dM',
+      session: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJkMDM3ZDYyLWM2ZmEtNDEwNy1hYmM0LWNkMTg3NTBmYWRmNyIsInVzZXJuYW1lIjoibWVtYmVyXzE3NzI2MzE4Nzg1NjkiLCJpYXQiOjE3NzI2MzE4NzksImV4cCI6MTc3MjYzMzY3OX0.8NEn-soSx8rYoIHHmvdk-6oikZAfwf0lmCgch79FbD4'
+    }
+
+      at log (src/routes/csrf.js:14:11)
+
+  console.log
+    [CSRF DEBUG] Issued CSRF token: 1olWvfVT-Ql0mpneTzW_GUhB94Y3Y5aeEQ38
+
+      at log (src/routes/csrf.js:17:11)
+
+  console.warn
+    Invalid cookie header encountered. Header: 'HttpOnly'
+
+      361 |       .find(c => c.startsWith('_csrf='))?.split(';')[0];
+      362 |
+    > 363 |     const joinRes = await agent
+          |                     ^
+      364 |       .post(`/api/chits/${chitId}/join`)
+      365 |       .set('Cookie', [memberSessionCookie, freshCsrfCookie].filter(Boolean).join('; '))
+      366 |       .set('x-csrf-token', freshToken);
+
+      at Cookie.parse (node_modules/cookiejar/cookiejar.js:80:25)
+      at new Cookie (node_modules/cookiejar/cookiejar.js:33:22)
+      at node_modules/cookiejar/cookiejar.js:271:20
+          at Array.map (<anonymous>)
+      at CookieJar.setCookies (node_modules/cookiejar/cookiejar.js:270:27)
+      at Test.setCookies [as request] (node_modules/superagent/src/node/index.js:838:20)
+      at Test.request [as end] (node_modules/superagent/src/node/index.js:965:8)
+      at Test.end (node_modules/supertest/lib/test.js:136:11)
+      at end (node_modules/superagent/src/request-base.js:283:12)
+      at Test.RequestBase.then (node_modules/superagent/src/request-base.js:265:31)
+      at Object.<anonymous> (src/__tests__/routes.test.js:363:21)
+
+  console.log
+    [CSRF DEBUG] POST /api/chits/ad57fddd-2ddc-4ee3-bbe4-9befa43d0225/join
+
+      at log (src/app.js:114:17)
+
+  console.log
+    [CSRF DEBUG] Cookie header: session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJkMDM3ZDYyLWM2ZmEtNDEwNy1hYmM0LWNkMTg3NTBmYWRmNyIsInVzZXJuYW1lIjoibWVtYmVyXzE3NzI2MzE4Nzg1NjkiLCJpYXQiOjE3NzI2MzE4NzksImV4cCI6MTc3MjYzMzY3OX0.8NEn-soSx8rYoIHHmvdk-6oikZAfwf0lmCgch79FbD4; Max-Age=604800; Path=/; Expires=Wed, 11 Mar 2026 13:44:39 GMT; null=null; SameSite=Strict; _csrf=VxotRnUUsGkUkKTgZ3C9R0dM
+
+      at log (src/app.js:115:17)
+
+  console.log
+    [CSRF DEBUG] x-csrf-token header: 1olWvfVT-Ql0mpneTzW_GUhB94Y3Y5aeEQ38
+
+      at log (src/app.js:116:17)
+
+  console.log
+    [CSRF DEBUG] Parsed cookies: {
+      session: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJkMDM3ZDYyLWM2ZmEtNDEwNy1hYmM0LWNkMTg3NTBmYWRmNyIsInVzZXJuYW1lIjoibWVtYmVyXzE3NzI2MzE4Nzg1NjkiLCJpYXQiOjE3NzI2MzE4NzksImV4cCI6MTc3MjYzMzY3OX0.8NEn-soSx8rYoIHHmvdk-6oikZAfwf0lmCgch79FbD4',
+      'Max-Age': '604800',
+      Path: '/',
+      Expires: 'Wed, 11 Mar 2026 13:44:39 GMT',
+      null: 'null',
+      SameSite: 'Strict',
+      _csrf: 'VxotRnUUsGkUkKTgZ3C9R0dM'
+    }
+
+      at log (src/app.js:117:17)
+
+  console.log
+    [CSRF DEBUG] Raw headers: {
+      host: '127.0.0.1:58325',
+      'accept-encoding': 'gzip, deflate',
+      cookie: 'session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJkMDM3ZDYyLWM2ZmEtNDEwNy1hYmM0LWNkMTg3NTBmYWRmNyIsInVzZXJuYW1lIjoibWVtYmVyXzE3NzI2MzE4Nzg1NjkiLCJpYXQiOjE3NzI2MzE4NzksImV4cCI6MTc3MjYzMzY3OX0.8NEn-soSx8rYoIHHmvdk-6oikZAfwf0lmCgch79FbD4; Max-Age=604800; Path=/; Expires=Wed, 11 Mar 2026 13:44:39 GMT; null=null; SameSite=Strict; _csrf=VxotRnUUsGkUkKTgZ3C9R0dM',
+      'x-csrf-token': '1olWvfVT-Ql0mpneTzW_GUhB94Y3Y5aeEQ38',
+      connection: 'close',
+      'content-length': '0'
+    }
+
+      at log (src/app.js:118:17)
+
+(node:71134) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS src/__tests__/routes.test.js
+  Health Route
+    ✓ GET /api/health returns 200 with ok and db status (42 ms)
+  User Routes
+    ✓ GET /api/user/check-username returns available status (13 ms)
+    ✓ POST /api/user/register returns 400 for missing fields (14 ms)
+    ✓ POST /api/user/login returns 400 for missing fields (6 ms)
+  Log Route
+    ✓ POST /api/log returns 400 for missing message (6 ms)
+    ✓ POST /api/log returns 200 for valid log entry (7 ms)
+  Chit Fund Routes — Unauthenticated
+    ✓ GET /api/chits/all-memberships returns 401 when not authenticated (14 ms)
+    ✓ POST /api/chits/create returns 401 when not authenticated (10 ms)
+    ✓ POST /api/chits/:chitId/join returns 401 when not authenticated (9 ms)
+    ○ skipped GET /api/chits/pending-join-requests returns 401 when not authenticated (SKIPPED: endpoint does not exist)
+  Chit CRUD Routes — Unauthenticated
+    ✓ POST /api/chits/crud/create returns 401 for unauthenticated request (6 ms)
+    ✓ GET /api/chits/crud/list returns 401 for unauthenticated request (5 ms)
+  Chit Admin Routes — Unauthenticated
+    ✓ POST /api/chits/:chitId/requests/:membershipId returns 401 when not authenticated (4 ms)
+  Chit Fund Success Cases
+    ✓ GET /api/user/me returns authenticated user info (7 ms)
+    ✓ POST /api/chits/create creates a chit fund when authenticated as admin (34 ms)
+    ✓ GET /api/chits/list returns chit funds for authenticated admin (9 ms)
+    ✓ POST /api/chits/:chitId/join allows member to request joining (246 ms)
+
+PASS src/__tests__/crudRouter.direct.test.js
+  Business Logic
+    ✓ creates a chit fund with valid input (167 ms)
+    ✓ returns 400 when chit fund name already exists (95 ms)
+    ✓ returns 200 and array for GET /crud/list when user has chit funds (108 ms)
+    ✓ returns 200 and empty array for GET /crud/list when user has no chit funds (82 ms)
+  Security
+    ✓ ignores isAdmin/role in request body (mass assignment protection) (84 ms)
+  Chit CRUD Router (direct)
+    Authentication
+      ✓ POST /crud/create returns 401 for unauthenticated (5 ms)
+      ✓ GET /crud/list returns 401 for unauthenticated (4 ms)
+    Input Validation
+      ✓ returns 400 when all fields missing (6 ms)
+      ✓ returns 400 when name is missing (4 ms)
+      ✓ returns 400 when monthlyAmount is missing (4 ms)
+      ✓ returns 400 when chitsLeft is missing (5 ms)
+      ✓ returns 400 when name is too short (4 ms)
+      ✓ returns 400 when name is too long (4 ms)
+      ✓ returns 400 when monthlyAmount is zero (4 ms)
+      ✓ returns 400 when monthlyAmount is negative (4 ms)
+      ✓ returns 400 when monthlyAmount is not a number (4 ms)
+      ✓ returns 400 when chitsLeft is zero (4 ms)
+      ✓ returns 400 when chitsLeft is negative (6 ms)
+      ✓ returns 400 when chitsLeft is not an integer (5 ms)
+      ✓ returns 201 when extra unexpected fields are present (10 ms)
+      ✓ returns 400 for SQL injection/XSS in name (9 ms)
+      ✓ returns 201 for unicode/emoji in name (8 ms)
+
+PASS src/__tests__/truncateAll.test.js
+  truncateAll script
+    ✓ should truncate all tables and remove all users (277 ms)
+
+PASS src/__tests__/chitCrudController.test.js
+  chitCrudController
+    createChitFund
+      ✓ should throw error for missing fields (2 ms)
+    listUserChits
+      ✓ should return array of chit funds for user (1 ms)
+
+PASS src/__tests__/chitCrudController.regression.test.js
+  chitCrudController — unauthenticated regression
+    ✓ createChitFund returns 401 error envelope for unauthenticated (1 ms)
+    ✓ listUserChits returns 401 error envelope for unauthenticated (1 ms)
+
+PASS src/__tests__/User.model.test.js
+  User model
+    ✓ should not create user without required fields (2 ms)
+    ✓ should create user with required fields (35 ms)
+
+PASS src/__tests__/crudRouter.isolated.test.js
+  Isolated CRUD Router
+    ✓ GET /crud/list returns chit funds or error (66 ms)
+    ✓ POST /crud/create returns 400 for missing fields (8 ms)
+
+PASS src/__tests__/health.test.js
+  Health Route
+    ✓ should return 200 and ok/db status (36 ms)
+
+PASS src/__tests__/routes.integration.test.js
+  Backend Route Tests
+    ✓ GET /api/health should return 200 (34 ms)
+
+PASS src/__tests__/migration_logs_schema.test.js
+  Logs table schema
+    ✓ should have all required columns in Logs (24 ms)
+
+PASS src/__tests__/Membership.model.test.js
+  Membership model
+    ✓ should not create membership without required fields (1 ms)
+    ✓ should create membership with required fields (5 ms)
+
+PASS src/__tests__/migration_users_schema.test.js
+  Users table schema
+    ✓ should have all required columns in Users (21 ms)
+
+PASS src/__tests__/migration_memberships_schema.test.js
+  Memberships table schema
+    ✓ should have all required columns in Memberships (18 ms)
+
+PASS src/__tests__/migration_schema.test.js
+  ChitFunds table schema
+    ✓ should have a description column in ChitFunds (21 ms)
+
+PASS src/__tests__/Log.model.test.js
+  Log model
+    ✓ should not create log without required fields (2 ms)
+    ✓ should create log with required fields (33 ms)
+
+PASS src/__tests__/ChitFund.model.test.js
+  ChitFund model
+    ✓ should not create chit fund without required fields (1 ms)
+    ✓ should create chit fund with required fields (29 ms)
+
+PASS src/__tests__/chitAdminController.test.js
+  chitAdminController
+    handleRequestAction
+      ✓ should return 400 for missing params (1 ms)
+
+PASS src/__tests__/userController.test.js
+  userController
+    register
+      ✓ should return 400 for missing fields (1 ms)
+
+PASS src/__tests__/logToFile.test.js
+  logToFile utility
+    ✓ should write a log message to the log file (2 ms)
+    ✓ should stringify objects in log (1 ms)
+
+PASS src/__tests__/guid.test.js
+  guid utility
+    ✓ should generate a valid UUID v4 string
+
+Test Suites: 20 passed, 20 total
+Tests:       1 skipped, 64 passed, 65 total
+Snapshots:   0 total
+Time:        3.947 s, estimated 5 s
+Ran all test suites.
+
+> test:frontend
+> cd frontend && npx jest --config ./jest.config.cjs --detectOpenHandles --runInBand --verbose
+
+  console.log
+    [TEST][START] LoginForm renders login form and validates input
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    handleSubmit called, validation error: Username must be at least 3 characters.
+
+      at log (src/components/LoginForm.jsx:21:13)
+
+  console.log
+    handleSubmit called, validation error:
+
+      at log (src/components/LoginForm.jsx:21:13)
+
+  console.log
+    [TEST][END] LoginForm renders login form and validates input
+
+      at Object.log (jest.setup.js:9:11)
+
+  console.log
+    [TEST][START] LoginForm closes error popup when close button is clicked
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] LoginForm closes error popup when close button is clicked
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/LoginForm.test.jsx
+  LoginForm
+    ✓ renders login form and validates input (114 ms)
+    ✓ closes error popup when close button is clicked (17 ms)
+
+  console.log
+    [TEST][START] RegisterForm file upload validates and accepts image file upload
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] RegisterForm file upload validates and accepts image file upload
+
+      at Object.log (jest.setup.js:9:11)
+
+  console.log
+    [TEST][START] RegisterForm file upload rejects non-image file upload
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] RegisterForm file upload rejects non-image file upload
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/RegisterFormFileUpload.test.jsx
+  RegisterForm file upload
+    ✓ validates and accepts image file upload (46 ms)
+    ✓ rejects non-image file upload (13 ms)
+
+  console.log
+    [TEST][START] RegisterForm renders and validates registration form
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] RegisterForm renders and validates registration form
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/RegisterForm.test.jsx
+  RegisterForm
+    ✓ renders and validates registration form (43 ms)
+
+  console.log
+    [TEST][START] ChitDetailsPage renders chit details and handles back button
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] ChitDetailsPage renders chit details and handles back button
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/ChitDetailsPage.test.jsx
+  ChitDetailsPage
+    ✓ renders chit details and handles back button (55 ms)
+
+  console.log
+    [TEST][START] Join Chit Fund Flow renders join modal and submits join request
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] Join Chit Fund Flow renders join modal and submits join request
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/JoinChitFundFlow.test.jsx
+  Join Chit Fund Flow
+    ✓ renders join modal and submits join request (471 ms)
+
+  console.log
+    [TEST][START] logToBackend calls fetch with correct params and CSRF header
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] logToBackend calls fetch with correct params and CSRF header
+
+      at Object.log (jest.setup.js:9:11)
+
+  console.log
+    [TEST][START] logToBackend handles fetch error gracefully
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] logToBackend handles fetch error gracefully
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/logToBackend.test.js
+  logToBackend
+    ✓ calls fetch with correct params and CSRF header (8 ms)
+    ✓ handles fetch error gracefully (2 ms)
+
+  console.log
+    [TEST][START] ChitGrid renders empty state
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] ChitGrid renders empty state
+
+      at Object.log (jest.setup.js:9:11)
+
+  console.log
+    [TEST][START] ChitGrid renders chit cards
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] ChitGrid renders chit cards
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/ChitGrid.test.jsx
+  ChitGrid
+    ✓ renders empty state (5 ms)
+    ✓ renders chit cards (14 ms)
+
+  console.log
+    [TEST][START] Chit Fund Creation Flow renders chit creation modal and submits valid form
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] Chit Fund Creation Flow renders chit creation modal and submits valid form
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/ChitCreationFlow.test.jsx
+  Chit Fund Creation Flow
+    ✓ renders chit creation modal and submits valid form (69 ms)
+
+  console.log
+    [TEST][START] FrontendHealthCheck shows healthy status when backend is up
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] FrontendHealthCheck shows healthy status when backend is up
+
+      at Object.log (jest.setup.js:9:11)
+
+  console.log
+    [TEST][START] FrontendHealthCheck shows unreachable status when backend is down
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] FrontendHealthCheck shows unreachable status when backend is down
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/FrontendHealthCheck.test.jsx
+  FrontendHealthCheck
+    ✓ shows healthy status when backend is up (37 ms)
+    ✓ shows unreachable status when backend is down (14 ms)
+
+  console.log
+    [TEST][START] ChitCard renders chit card details
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] ChitCard renders chit card details
+
+      at Object.log (jest.setup.js:9:11)
+
+  console.log
+    [TEST][START] ChitCard calls onClick when clicked
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] ChitCard calls onClick when clicked
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/ChitCard.test.jsx
+  ChitCard
+    ✓ renders chit card details (6 ms)
+    ✓ calls onClick when clicked (5 ms)
+
+  console.log
+    [TEST][START] App renders without crashing and shows Loading login
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] App renders without crashing and shows Loading login
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/App.test.jsx
+  App
+    ✓ renders without crashing and shows Loading login (31 ms)
+
+  console.log
+    [TEST][START] Popup does not render when open is false
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] Popup does not render when open is false
+
+      at Object.log (jest.setup.js:9:11)
+
+  console.log
+    [TEST][START] Popup renders message and calls onClose
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] Popup renders message and calls onClose
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/Popup.test.jsx
+  Popup
+    ✓ does not render when open is false (5 ms)
+    ✓ renders message and calls onClose (8 ms)
+
+  console.log
+    [TEST][START] Accessibility (a11y) checks ChitDetailsPage has no detectable a11y violations
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] Accessibility (a11y) checks ChitDetailsPage has no detectable a11y violations
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/ChitDetailsPage.a11y.test.jsx
+  Accessibility (a11y) checks
+    ✓ ChitDetailsPage has no detectable a11y violations (58 ms)
+
+  console.log
+    [TEST][START] Accessibility (a11y) checks ChitCard has no detectable a11y violations
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] Accessibility (a11y) checks ChitCard has no detectable a11y violations
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/ChitCard.a11y.test.jsx
+  Accessibility (a11y) checks
+    ✓ ChitCard has no detectable a11y violations (51 ms)
+
+  console.log
+    [TEST][START] Accessibility (a11y) checks Popup has no detectable a11y violations
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] Accessibility (a11y) checks Popup has no detectable a11y violations
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/Popup.a11y.test.jsx
+  Accessibility (a11y) checks
+    ✓ Popup has no detectable a11y violations (45 ms)
+
+  console.log
+    [TEST][START] Accessibility (a11y) checks RegisterForm has no detectable a11y violations
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] Accessibility (a11y) checks RegisterForm has no detectable a11y violations
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/RegisterForm.a11y.test.jsx
+  Accessibility (a11y) checks
+    ✓ RegisterForm has no detectable a11y violations (65 ms)
+
+  console.log
+    [TEST][START] Accessibility (a11y) checks LoginForm has no detectable a11y violations
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] Accessibility (a11y) checks LoginForm has no detectable a11y violations
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/LoginForm.a11y.test.jsx
+  Accessibility (a11y) checks
+    ✓ LoginForm has no detectable a11y violations (54 ms)
+
+  console.log
+    [TEST][START] Accessibility (a11y) checks App has no detectable a11y violations
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.error
+    A suspended resource finished loading inside a test, but the event was not wrapped in act(...).
+    
+    When testing, code that resolves suspended data should be wrapped into act(...):
+    
+    act(() => {
+      /* finish loading suspended data */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+      at pingSuspendedRoot (node_modules/react-dom/cjs/react-dom-client.development.js:18600:17)
+
+  console.error
+    A suspended resource finished loading inside a test, but the event was not wrapped in act(...).
+    
+    When testing, code that resolves suspended data should be wrapped into act(...):
+    
+    act(() => {
+      /* finish loading suspended data */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+      at pingSuspendedRoot (node_modules/react-dom/cjs/react-dom-client.development.js:18600:17)
+
+  console.error
+    An update to FrontendHealthCheck inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+      496 |     fetch('/api/health', { signal: controller.signal })
+      497 |       .then(r => r.ok ? r.json() : Promise.reject())
+    > 498 |       .then(data => setStatus(data.ok ? 'ok' : 'fail'))
+          |                     ^
+      499 |       .catch((err) => {
+      500 |         if (err.name !== 'AbortError') setStatus('fail');
+      501 |       });
+
+      at node_modules/react-dom/cjs/react-dom-client.development.js:18758:19
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom-client.development.js:18757:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom-client.development.js:16409:11)
+      at dispatchSetStateInternal (node_modules/react-dom/cjs/react-dom-client.development.js:9170:13)
+      at dispatchSetState (node_modules/react-dom/cjs/react-dom-client.development.js:9127:7)
+      at setStatus (src/App.jsx:498:21)
+
+  console.error
+    An update to App inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+      78 |       .then(r => r.ok ? r.json() : Promise.reject())
+      79 |       .then(data => {
+    > 80 |         setUser({ id: data.id, username: data.username });
+         |         ^
+      81 |         setPage('home');
+      82 |       })
+      83 |       .catch(() => {
+
+      at node_modules/react-dom/cjs/react-dom-client.development.js:18758:19
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom-client.development.js:18757:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom-client.development.js:16409:11)
+      at dispatchSetStateInternal (node_modules/react-dom/cjs/react-dom-client.development.js:9170:13)
+      at dispatchSetState (node_modules/react-dom/cjs/react-dom-client.development.js:9127:7)
+      at setUser (src/App.jsx:80:9)
+
+  console.error
+    An update to App inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+      79 |       .then(data => {
+      80 |         setUser({ id: data.id, username: data.username });
+    > 81 |         setPage('home');
+         |         ^
+      82 |       })
+      83 |       .catch(() => {
+      84 |         setUser(null);
+
+      at node_modules/react-dom/cjs/react-dom-client.development.js:18758:19
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom-client.development.js:18757:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom-client.development.js:16409:11)
+      at dispatchSetStateInternal (node_modules/react-dom/cjs/react-dom-client.development.js:9170:13)
+      at dispatchSetState (node_modules/react-dom/cjs/react-dom-client.development.js:9127:7)
+      at setPage (src/App.jsx:81:9)
+
+  console.error
+    A suspended resource finished loading inside a test, but the event was not wrapped in act(...).
+    
+    When testing, code that resolves suspended data should be wrapped into act(...):
+    
+    act(() => {
+      /* finish loading suspended data */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+      at pingSuspendedRoot (node_modules/react-dom/cjs/react-dom-client.development.js:18600:17)
+
+  console.log
+    [TEST][END] Accessibility (a11y) checks App has no detectable a11y violations
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/App.a11y.test.jsx
+  Accessibility (a11y) checks
+    ✓ App has no detectable a11y violations (66 ms)
+
+  console.log
+    [TEST][START] import.meta.env polyfill loads
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] import.meta.env polyfill loads
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/jest.importMetaEnv.polyfill.js
+  ✓ import.meta.env polyfill loads (2 ms)
+
+Test Suites: 19 passed, 19 total
+Tests:       26 passed, 26 total
+Snapshots:   0 total
+Time:        4.222 s
+Ran all test suites.

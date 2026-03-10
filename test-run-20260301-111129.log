@@ -1,0 +1,297 @@
+
+> test:all
+> npm run test:backend && npm run test:frontend
+
+
+> test:backend
+> cd backend && npx jest --config ./jest.config.cjs --detectOpenHandles --runInBand --verbose
+
+(node:91664) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS tests/routes.test.js
+  Backend Route Tests
+    ✓ GET /api/health should return 200 (77 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.651 s, estimated 1 s
+Ran all test suites.
+
+> test:frontend
+> cd frontend && npx jest --config ./jest.config.cjs --detectOpenHandles --runInBand --verbose
+
+  console.log
+    handleSubmit called, validation error: Username must be at least 3 characters.
+
+      at log (src/components/LoginForm.jsx:21:13)
+
+  console.log
+    handleSubmit called, validation error:
+
+      at log (src/components/LoginForm.jsx:21:13)
+
+PASS src/__tests__/LoginForm.test.jsx
+  LoginForm
+    ✓ renders login form and validates input (113 ms)
+    ✓ closes error popup when close button is clicked (16 ms)
+
+PASS src/__tests__/JoinChitFundFlow.test.jsx
+  Join Chit Fund Flow
+    ✓ renders join modal and submits join request (398 ms)
+
+  console.error
+    A suspended resource finished loading inside a test, but the event was not wrapped in act(...).
+    
+    When testing, code that resolves suspended data should be wrapped into act(...):
+    
+    act(() => {
+      /* finish loading suspended data */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+      at pingSuspendedRoot (node_modules/react-dom/cjs/react-dom-client.development.js:18600:17)
+
+  console.error
+    A suspended resource finished loading inside a test, but the event was not wrapped in act(...).
+    
+    When testing, code that resolves suspended data should be wrapped into act(...):
+    
+    act(() => {
+      /* finish loading suspended data */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+      at pingSuspendedRoot (node_modules/react-dom/cjs/react-dom-client.development.js:18600:17)
+
+  console.error
+    An update to FrontendHealthCheck inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+      460 |     fetch('/api/health', { signal: controller.signal })
+      461 |       .then(r => r.ok ? r.json() : Promise.reject())
+    > 462 |       .then(data => setStatus(data.ok ? 'ok' : 'fail'))
+          |                     ^
+      463 |       .catch((err) => {
+      464 |         if (err.name !== 'AbortError') setStatus('fail');
+      465 |       });
+
+      at node_modules/react-dom/cjs/react-dom-client.development.js:18758:19
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom-client.development.js:18757:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom-client.development.js:16409:11)
+      at dispatchSetStateInternal (node_modules/react-dom/cjs/react-dom-client.development.js:9170:13)
+      at dispatchSetState (node_modules/react-dom/cjs/react-dom-client.development.js:9127:7)
+      at setStatus (src/App.jsx:462:21)
+
+  console.error
+    An update to App inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+      58 |       .then(r => r.ok ? r.json() : Promise.reject())
+      59 |       .then(data => {
+    > 60 |         setUser({ id: data.id, username: data.username });
+         |         ^
+      61 |         setPage('home');
+      62 |       })
+      63 |       .catch(() => {
+
+      at node_modules/react-dom/cjs/react-dom-client.development.js:18758:19
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom-client.development.js:18757:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom-client.development.js:16409:11)
+      at dispatchSetStateInternal (node_modules/react-dom/cjs/react-dom-client.development.js:9170:13)
+      at dispatchSetState (node_modules/react-dom/cjs/react-dom-client.development.js:9127:7)
+      at setUser (src/App.jsx:60:9)
+
+  console.error
+    An update to App inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+      59 |       .then(data => {
+      60 |         setUser({ id: data.id, username: data.username });
+    > 61 |         setPage('home');
+         |         ^
+      62 |       })
+      63 |       .catch(() => {
+      64 |         setUser(null);
+
+      at node_modules/react-dom/cjs/react-dom-client.development.js:18758:19
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom-client.development.js:18757:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom-client.development.js:16409:11)
+      at dispatchSetStateInternal (node_modules/react-dom/cjs/react-dom-client.development.js:9170:13)
+      at dispatchSetState (node_modules/react-dom/cjs/react-dom-client.development.js:9127:7)
+      at setPage (src/App.jsx:61:9)
+
+  console.error
+    A suspended resource finished loading inside a test, but the event was not wrapped in act(...).
+    
+    When testing, code that resolves suspended data should be wrapped into act(...):
+    
+    act(() => {
+      /* finish loading suspended data */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+      at pingSuspendedRoot (node_modules/react-dom/cjs/react-dom-client.development.js:18600:17)
+
+PASS src/__tests__/App.a11y.test.jsx
+  Accessibility (a11y) checks
+    ✓ App has no detectable a11y violations (84 ms)
+
+PASS src/__tests__/RegisterForm.a11y.test.jsx
+  Accessibility (a11y) checks
+    ✓ RegisterForm has no detectable a11y violations (72 ms)
+
+PASS src/__tests__/ChitDetailsPage.test.jsx
+  ChitDetailsPage
+    ✓ renders chit details and handles back button (48 ms)
+
+PASS src/__tests__/ChitCreationFlow.test.jsx
+  Chit Fund Creation Flow
+    ✓ renders chit creation modal and submits valid form (69 ms)
+
+PASS src/__tests__/LoginForm.a11y.test.jsx
+  Accessibility (a11y) checks
+    ✓ LoginForm has no detectable a11y violations (63 ms)
+
+PASS src/__tests__/ChitCard.a11y.test.jsx
+  Accessibility (a11y) checks
+    ✓ ChitCard has no detectable a11y violations (57 ms)
+
+PASS src/__tests__/ChitDetailsPage.a11y.test.jsx
+  Accessibility (a11y) checks
+    ✓ ChitDetailsPage has no detectable a11y violations (41 ms)
+
+PASS src/__tests__/Popup.a11y.test.jsx
+  Accessibility (a11y) checks
+    ✓ Popup has no detectable a11y violations (41 ms)
+
+PASS src/__tests__/RegisterFormFileUpload.test.jsx
+  RegisterForm file upload
+    ✓ validates and accepts image file upload (38 ms)
+    ✓ rejects non-image file upload (9 ms)
+
+PASS src/__tests__/RegisterForm.test.jsx
+  RegisterForm
+    ✓ renders and validates registration form (34 ms)
+
+PASS src/__tests__/FrontendHealthCheck.test.jsx
+  FrontendHealthCheck
+    ✓ shows healthy status when backend is up (26 ms)
+    ✓ shows unreachable status when backend is down (11 ms)
+
+PASS src/__tests__/App.test.jsx
+  App
+    ✓ renders without crashing and shows Loading login (32 ms)
+
+PASS src/__tests__/Popup.test.jsx
+  Popup
+    ✓ does not render when open is false (3 ms)
+    ✓ renders message and calls onClose (6 ms)
+
+PASS src/__tests__/ChitCard.test.jsx
+  ChitCard
+    ✓ renders chit card details (6 ms)
+    ✓ calls onClick when clicked (3 ms)
+
+PASS src/__tests__/ChitGrid.test.jsx
+  ChitGrid
+    ✓ renders empty state (4 ms)
+    ✓ renders chit cards (6 ms)
+
+  console.error
+    Failed to log to backend: Error: Network error
+        at /Users/yashwanth/Downloads/Project/frontend/src/__tests__/logToBackend.test.js:33:62
+        at /Users/yashwanth/Downloads/Project/node_modules/jest-mock/build/index.js:305:39
+        at /Users/yashwanth/Downloads/Project/node_modules/jest-mock/build/index.js:312:13
+        at mockConstructor (/Users/yashwanth/Downloads/Project/node_modules/jest-mock/build/index.js:102:19)
+        at fetch (/Users/yashwanth/Downloads/Project/frontend/src/utils/logToBackend.js:5:11)
+        at Generator.call (/Users/yashwanth/Downloads/Project/frontend/src/utils/logToBackend.js:2:1)
+        at Generator._invoke [as next] (/Users/yashwanth/Downloads/Project/frontend/src/utils/logToBackend.js:2:1)
+        at asyncGeneratorStep (/Users/yashwanth/Downloads/Project/frontend/src/utils/logToBackend.js:2:1)
+        at asyncGeneratorStep (/Users/yashwanth/Downloads/Project/frontend/src/utils/logToBackend.js:2:1)
+        at _next (/Users/yashwanth/Downloads/Project/frontend/src/utils/logToBackend.js:2:1)
+        at new Promise (<anonymous>)
+        at /Users/yashwanth/Downloads/Project/frontend/src/utils/logToBackend.js:2:1
+        at apply (/Users/yashwanth/Downloads/Project/frontend/src/utils/logToBackend.js:2:43)
+        at /Users/yashwanth/Downloads/Project/frontend/src/__tests__/logToBackend.test.js:35:30
+        at Generator.call (/Users/yashwanth/Downloads/Project/frontend/src/__tests__/logToBackend.test.js:2:1)
+        at Generator._invoke [as next] (/Users/yashwanth/Downloads/Project/frontend/src/__tests__/logToBackend.test.js:2:1)
+        at asyncGeneratorStep (/Users/yashwanth/Downloads/Project/frontend/src/__tests__/logToBackend.test.js:2:1)
+        at asyncGeneratorStep (/Users/yashwanth/Downloads/Project/frontend/src/__tests__/logToBackend.test.js:2:1)
+        at _next (/Users/yashwanth/Downloads/Project/frontend/src/__tests__/logToBackend.test.js:2:1)
+        at new Promise (<anonymous>)
+        at Object.<anonymous> (/Users/yashwanth/Downloads/Project/frontend/src/__tests__/logToBackend.test.js:2:1)
+        at Promise.finally.completed (/Users/yashwanth/.npm/_npx/b8d86e6551a4f492/node_modules/jest-circus/build/jestAdapterInit.js:1557:28)
+        at new Promise (<anonymous>)
+        at callAsyncCircusFn (/Users/yashwanth/.npm/_npx/b8d86e6551a4f492/node_modules/jest-circus/build/jestAdapterInit.js:1497:10)
+        at _callCircusTest (/Users/yashwanth/.npm/_npx/b8d86e6551a4f492/node_modules/jest-circus/build/jestAdapterInit.js:1007:40)
+        at _runTest (/Users/yashwanth/.npm/_npx/b8d86e6551a4f492/node_modules/jest-circus/build/jestAdapterInit.js:947:3)
+        at /Users/yashwanth/.npm/_npx/b8d86e6551a4f492/node_modules/jest-circus/build/jestAdapterInit.js:849:7
+        at _runTestsForDescribeBlock (/Users/yashwanth/.npm/_npx/b8d86e6551a4f492/node_modules/jest-circus/build/jestAdapterInit.js:862:11)
+        at _runTestsForDescribeBlock (/Users/yashwanth/.npm/_npx/b8d86e6551a4f492/node_modules/jest-circus/build/jestAdapterInit.js:857:11)
+        at run (/Users/yashwanth/.npm/_npx/b8d86e6551a4f492/node_modules/jest-circus/build/jestAdapterInit.js:761:3)
+        at runAndTransformResultsToJestFormat (/Users/yashwanth/.npm/_npx/b8d86e6551a4f492/node_modules/jest-circus/build/jestAdapterInit.js:1918:21)
+        at jestAdapter (/Users/yashwanth/.npm/_npx/b8d86e6551a4f492/node_modules/jest-circus/build/runner.js:101:19)
+        at runTestInternal (/Users/yashwanth/.npm/_npx/b8d86e6551a4f492/node_modules/jest-runner/build/index.js:275:16)
+        at runTest (/Users/yashwanth/.npm/_npx/b8d86e6551a4f492/node_modules/jest-runner/build/index.js:343:7) Fail message
+
+      11 |     // Optionally, fallback to console if backend is unreachable
+      12 |     // eslint-disable-next-line no-console
+    > 13 |     console.error('Failed to log to backend:', err, message);
+         |             ^
+      14 |   }
+      15 | }
+      16 |
+
+      at error (src/utils/logToBackend.js:13:13)
+      at Generator.call (src/utils/logToBackend.js:2:1)
+      at Generator._invoke [as throw] (src/utils/logToBackend.js:2:1)
+      at asyncGeneratorStep (src/utils/logToBackend.js:2:1)
+      at asyncGeneratorStep (src/utils/logToBackend.js:2:1)
+
+PASS src/__tests__/logToBackend.test.js
+  logToBackend
+    ✓ calls fetch with correct params (6 ms)
+    ✓ handles fetch error gracefully (4 ms)
+
+PASS src/__tests__/jest.importMetaEnv.polyfill.js
+  ✓ import.meta.env polyfill loads
+
+Test Suites: 19 passed, 19 total
+Tests:       26 passed, 26 total
+Snapshots:   0 total
+Time:        3.052 s
+Ran all test suites.

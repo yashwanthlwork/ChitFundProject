@@ -1,0 +1,1140 @@
+
+> test:all
+> npm run test:backend && npm run test:frontend
+
+
+> test:backend
+> cd backend && npx jest --config ./jest.config.cjs --detectOpenHandles --runInBand --verbose
+
+  console.log
+    [CSRF DEBUG] /api/csrf-token/token GET
+
+      at log (src/routes/csrf.js:12:11)
+
+  console.log
+    [CSRF DEBUG] Incoming Cookie header:
+
+      at log (src/routes/csrf.js:13:11)
+
+  console.log
+    [CSRF DEBUG] Parsed cookies: [Object: null prototype] {}
+
+      at log (src/routes/csrf.js:14:11)
+
+  console.log
+    [CSRF DEBUG] Issued CSRF token: GnTmDLRn-nA9lSmSFsL9-ebTN3EsicbBmc9E
+
+      at log (src/routes/csrf.js:17:11)
+
+  console.log
+    [CSRF DEBUG] POST /api/chits/create
+
+      at log (src/app.js:114:17)
+
+  console.log
+    [CSRF DEBUG] Cookie header: _csrf=nTE5T7LQOjrCFdkJwr7Qql-4
+
+      at log (src/app.js:115:17)
+
+  console.log
+    [CSRF DEBUG] x-csrf-token header: GnTmDLRn-nA9lSmSFsL9-ebTN3EsicbBmc9E
+
+      at log (src/app.js:116:17)
+
+  console.log
+    [CSRF DEBUG] Parsed cookies: { _csrf: 'nTE5T7LQOjrCFdkJwr7Qql-4' }
+
+      at log (src/app.js:117:17)
+
+  console.log
+    [CSRF DEBUG] Raw headers: {
+      host: '127.0.0.1:58644',
+      'accept-encoding': 'gzip, deflate',
+      'content-type': 'application/json',
+      cookie: '_csrf=nTE5T7LQOjrCFdkJwr7Qql-4',
+      'x-csrf-token': 'GnTmDLRn-nA9lSmSFsL9-ebTN3EsicbBmc9E',
+      'content-length': '51',
+      connection: 'close'
+    }
+
+      at log (src/app.js:118:17)
+
+  console.log
+    [CSRF DEBUG] POST /api/chits/invalid-id/join
+
+      at log (src/app.js:114:17)
+
+  console.log
+    [CSRF DEBUG] Cookie header: _csrf=nTE5T7LQOjrCFdkJwr7Qql-4
+
+      at log (src/app.js:115:17)
+
+  console.log
+    [CSRF DEBUG] x-csrf-token header: GnTmDLRn-nA9lSmSFsL9-ebTN3EsicbBmc9E
+
+      at log (src/app.js:116:17)
+
+  console.log
+    [CSRF DEBUG] Parsed cookies: { _csrf: 'nTE5T7LQOjrCFdkJwr7Qql-4' }
+
+      at log (src/app.js:117:17)
+
+  console.log
+    [CSRF DEBUG] Raw headers: {
+      host: '127.0.0.1:58644',
+      'accept-encoding': 'gzip, deflate',
+      cookie: '_csrf=nTE5T7LQOjrCFdkJwr7Qql-4',
+      'x-csrf-token': 'GnTmDLRn-nA9lSmSFsL9-ebTN3EsicbBmc9E',
+      connection: 'close',
+      'content-length': '0'
+    }
+
+      at log (src/app.js:118:17)
+
+  console.log
+    [CSRF DEBUG] /api/csrf-token/token GET
+
+      at log (src/routes/csrf.js:12:11)
+
+  console.log
+    [CSRF DEBUG] Incoming Cookie header: session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdjOGNkZGFiLTg4YmQtNDdkMi04OTc1LWEwMzUyZjRkYmYxMyIsInVzZXJuYW1lIjoiYWRtaW5fMTc3MjYzMjE2MDIyMSIsImlhdCI6MTc3MjYzMjE2MCwiZXhwIjoxNzcyNjMzOTYwfQ.mIYSYkhuvvM_iMBYWcpOvyjh0nDzvezKmb0I8VIxV10; _csrf=nTE5T7LQOjrCFdkJwr7Qql-4
+
+      at log (src/routes/csrf.js:13:11)
+
+  console.log
+    [CSRF DEBUG] Parsed cookies: {
+      session: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdjOGNkZGFiLTg4YmQtNDdkMi04OTc1LWEwMzUyZjRkYmYxMyIsInVzZXJuYW1lIjoiYWRtaW5fMTc3MjYzMjE2MDIyMSIsImlhdCI6MTc3MjYzMjE2MCwiZXhwIjoxNzcyNjMzOTYwfQ.mIYSYkhuvvM_iMBYWcpOvyjh0nDzvezKmb0I8VIxV10',
+      _csrf: 'nTE5T7LQOjrCFdkJwr7Qql-4'
+    }
+
+      at log (src/routes/csrf.js:14:11)
+
+  console.log
+    [CSRF DEBUG] Issued CSRF token: XrR8K8JR--YoFTD3UANklRK5pNBVUMppAOVE
+
+      at log (src/routes/csrf.js:17:11)
+
+  console.log
+    [CSRF DEBUG] POST /api/chits/create
+
+      at log (src/app.js:114:17)
+
+  console.log
+    [CSRF DEBUG] Cookie header: session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdjOGNkZGFiLTg4YmQtNDdkMi04OTc1LWEwMzUyZjRkYmYxMyIsInVzZXJuYW1lIjoiYWRtaW5fMTc3MjYzMjE2MDIyMSIsImlhdCI6MTc3MjYzMjE2MCwiZXhwIjoxNzcyNjMzOTYwfQ.mIYSYkhuvvM_iMBYWcpOvyjh0nDzvezKmb0I8VIxV10; _csrf=nTE5T7LQOjrCFdkJwr7Qql-4
+
+      at log (src/app.js:115:17)
+
+  console.log
+    [CSRF DEBUG] x-csrf-token header: XrR8K8JR--YoFTD3UANklRK5pNBVUMppAOVE
+
+      at log (src/app.js:116:17)
+
+  console.log
+    [CSRF DEBUG] Parsed cookies: {
+      session: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdjOGNkZGFiLTg4YmQtNDdkMi04OTc1LWEwMzUyZjRkYmYxMyIsInVzZXJuYW1lIjoiYWRtaW5fMTc3MjYzMjE2MDIyMSIsImlhdCI6MTc3MjYzMjE2MCwiZXhwIjoxNzcyNjMzOTYwfQ.mIYSYkhuvvM_iMBYWcpOvyjh0nDzvezKmb0I8VIxV10',
+      _csrf: 'nTE5T7LQOjrCFdkJwr7Qql-4'
+    }
+
+      at log (src/app.js:117:17)
+
+  console.log
+    [CSRF DEBUG] Raw headers: {
+      host: '127.0.0.1:58644',
+      'accept-encoding': 'gzip, deflate',
+      cookie: 'session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdjOGNkZGFiLTg4YmQtNDdkMi04OTc1LWEwMzUyZjRkYmYxMyIsInVzZXJuYW1lIjoiYWRtaW5fMTc3MjYzMjE2MDIyMSIsImlhdCI6MTc3MjYzMjE2MCwiZXhwIjoxNzcyNjMzOTYwfQ.mIYSYkhuvvM_iMBYWcpOvyjh0nDzvezKmb0I8VIxV10; _csrf=nTE5T7LQOjrCFdkJwr7Qql-4',
+      'x-csrf-token': 'XrR8K8JR--YoFTD3UANklRK5pNBVUMppAOVE',
+      'content-type': 'application/json',
+      'content-length': '70',
+      connection: 'close'
+    }
+
+      at log (src/app.js:118:17)
+
+  console.log
+    [CSRF DEBUG] /api/csrf-token/token GET
+
+      at log (src/routes/csrf.js:12:11)
+
+  console.log
+    [CSRF DEBUG] Incoming Cookie header: _csrf=nTE5T7LQOjrCFdkJwr7Qql-4; session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkYTRkMzg3LThhZTktNDM0MC1iNGExLWE4Zjk2MjlhOTgxMCIsInVzZXJuYW1lIjoibWVtYmVyXzE3NzI2MzIxNjAyMjEiLCJpYXQiOjE3NzI2MzIxNjAsImV4cCI6MTc3MjYzMzk2MH0.e9q5ZWghJoPc_HwA41SEQQrpsn02dq5R2F5kIWyS09M
+
+      at log (src/routes/csrf.js:13:11)
+
+  console.log
+    [CSRF DEBUG] Parsed cookies: {
+      _csrf: 'nTE5T7LQOjrCFdkJwr7Qql-4',
+      session: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkYTRkMzg3LThhZTktNDM0MC1iNGExLWE4Zjk2MjlhOTgxMCIsInVzZXJuYW1lIjoibWVtYmVyXzE3NzI2MzIxNjAyMjEiLCJpYXQiOjE3NzI2MzIxNjAsImV4cCI6MTc3MjYzMzk2MH0.e9q5ZWghJoPc_HwA41SEQQrpsn02dq5R2F5kIWyS09M'
+    }
+
+      at log (src/routes/csrf.js:14:11)
+
+  console.log
+    [CSRF DEBUG] Issued CSRF token: 0ku3VTSh-ca4-Pv_7SFa2Ao0Hsd08FWc0Q0w
+
+      at log (src/routes/csrf.js:17:11)
+
+  console.warn
+    Invalid cookie header encountered. Header: 'HttpOnly'
+
+      361 |       .find(c => c.startsWith('_csrf='))?.split(';')[0];
+      362 |
+    > 363 |     const joinRes = await agent
+          |                     ^
+      364 |       .post(`/api/chits/${chitId}/join`)
+      365 |       .set('Cookie', [memberSessionCookie, freshCsrfCookie].filter(Boolean).join('; '))
+      366 |       .set('x-csrf-token', freshToken);
+
+      at Cookie.parse (node_modules/cookiejar/cookiejar.js:80:25)
+      at new Cookie (node_modules/cookiejar/cookiejar.js:33:22)
+      at node_modules/cookiejar/cookiejar.js:271:20
+          at Array.map (<anonymous>)
+      at CookieJar.setCookies (node_modules/cookiejar/cookiejar.js:270:27)
+      at Test.setCookies [as request] (node_modules/superagent/src/node/index.js:838:20)
+      at Test.request [as end] (node_modules/superagent/src/node/index.js:965:8)
+      at Test.end (node_modules/supertest/lib/test.js:136:11)
+      at end (node_modules/superagent/src/request-base.js:283:12)
+      at Test.RequestBase.then (node_modules/superagent/src/request-base.js:265:31)
+      at Object.<anonymous> (src/__tests__/routes.test.js:363:21)
+
+  console.log
+    [CSRF DEBUG] POST /api/chits/b6572b1b-1c2b-4e2b-9a0c-b690066d3499/join
+
+      at log (src/app.js:114:17)
+
+  console.log
+    [CSRF DEBUG] Cookie header: session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkYTRkMzg3LThhZTktNDM0MC1iNGExLWE4Zjk2MjlhOTgxMCIsInVzZXJuYW1lIjoibWVtYmVyXzE3NzI2MzIxNjAyMjEiLCJpYXQiOjE3NzI2MzIxNjAsImV4cCI6MTc3MjYzMzk2MH0.e9q5ZWghJoPc_HwA41SEQQrpsn02dq5R2F5kIWyS09M; Max-Age=604800; Path=/; Expires=Wed, 11 Mar 2026 13:49:20 GMT; null=null; SameSite=Strict; _csrf=nTE5T7LQOjrCFdkJwr7Qql-4
+
+      at log (src/app.js:115:17)
+
+  console.log
+    [CSRF DEBUG] x-csrf-token header: 0ku3VTSh-ca4-Pv_7SFa2Ao0Hsd08FWc0Q0w
+
+      at log (src/app.js:116:17)
+
+  console.log
+    [CSRF DEBUG] Parsed cookies: {
+      session: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkYTRkMzg3LThhZTktNDM0MC1iNGExLWE4Zjk2MjlhOTgxMCIsInVzZXJuYW1lIjoibWVtYmVyXzE3NzI2MzIxNjAyMjEiLCJpYXQiOjE3NzI2MzIxNjAsImV4cCI6MTc3MjYzMzk2MH0.e9q5ZWghJoPc_HwA41SEQQrpsn02dq5R2F5kIWyS09M',
+      'Max-Age': '604800',
+      Path: '/',
+      Expires: 'Wed, 11 Mar 2026 13:49:20 GMT',
+      null: 'null',
+      SameSite: 'Strict',
+      _csrf: 'nTE5T7LQOjrCFdkJwr7Qql-4'
+    }
+
+      at log (src/app.js:117:17)
+
+  console.log
+    [CSRF DEBUG] Raw headers: {
+      host: '127.0.0.1:58644',
+      'accept-encoding': 'gzip, deflate',
+      cookie: 'session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkYTRkMzg3LThhZTktNDM0MC1iNGExLWE4Zjk2MjlhOTgxMCIsInVzZXJuYW1lIjoibWVtYmVyXzE3NzI2MzIxNjAyMjEiLCJpYXQiOjE3NzI2MzIxNjAsImV4cCI6MTc3MjYzMzk2MH0.e9q5ZWghJoPc_HwA41SEQQrpsn02dq5R2F5kIWyS09M; Max-Age=604800; Path=/; Expires=Wed, 11 Mar 2026 13:49:20 GMT; null=null; SameSite=Strict; _csrf=nTE5T7LQOjrCFdkJwr7Qql-4',
+      'x-csrf-token': '0ku3VTSh-ca4-Pv_7SFa2Ao0Hsd08FWc0Q0w',
+      connection: 'close',
+      'content-length': '0'
+    }
+
+      at log (src/app.js:118:17)
+
+(node:71698) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS src/__tests__/routes.test.js
+  Health Route
+    ✓ GET /api/health returns 200 with ok and db status (44 ms)
+  User Routes
+    ✓ GET /api/user/check-username returns available status (13 ms)
+    ✓ POST /api/user/register returns 400 for missing fields (16 ms)
+    ✓ POST /api/user/login returns 400 for missing fields (6 ms)
+  Log Route
+    ✓ POST /api/log returns 400 for missing message (6 ms)
+    ✓ POST /api/log returns 200 for valid log entry (10 ms)
+  Chit Fund Routes — Unauthenticated
+    ✓ GET /api/chits/all-memberships returns 401 when not authenticated (6 ms)
+    ✓ POST /api/chits/create returns 401 when not authenticated (11 ms)
+    ✓ POST /api/chits/:chitId/join returns 401 when not authenticated (9 ms)
+    ○ skipped GET /api/chits/pending-join-requests returns 401 when not authenticated (SKIPPED: endpoint does not exist)
+  Chit CRUD Routes — Unauthenticated
+    ✓ POST /api/chits/crud/create returns 401 for unauthenticated request (8 ms)
+    ✓ GET /api/chits/crud/list returns 401 for unauthenticated request (5 ms)
+  Chit Admin Routes — Unauthenticated
+    ✓ POST /api/chits/:chitId/requests/:membershipId returns 401 when not authenticated (5 ms)
+  Chit Fund Success Cases
+    ✓ GET /api/user/me returns authenticated user info (15 ms)
+    ✓ POST /api/chits/create creates a chit fund when authenticated as admin (29 ms)
+    ✓ GET /api/chits/list returns chit funds for authenticated admin (10 ms)
+    ✓ POST /api/chits/:chitId/join allows member to request joining (255 ms)
+
+PASS src/__tests__/crudRouter.direct.test.js
+  Business Logic
+    ✓ creates a chit fund with valid input (144 ms)
+    ✓ returns 400 when chit fund name already exists (94 ms)
+    ✓ returns 200 and array for GET /crud/list when user has chit funds (96 ms)
+    ✓ returns 200 and empty array for GET /crud/list when user has no chit funds (70 ms)
+  Security
+    ✓ ignores isAdmin/role in request body (mass assignment protection) (71 ms)
+  Chit CRUD Router (direct)
+    Authentication
+      ✓ POST /crud/create returns 401 for unauthenticated (4 ms)
+      ✓ GET /crud/list returns 401 for unauthenticated (4 ms)
+    Input Validation
+      ✓ returns 400 when all fields missing (5 ms)
+      ✓ returns 400 when name is missing (5 ms)
+      ✓ returns 400 when monthlyAmount is missing (4 ms)
+      ✓ returns 400 when chitsLeft is missing (5 ms)
+      ✓ returns 400 when name is too short (10 ms)
+      ✓ returns 400 when name is too long (4 ms)
+      ✓ returns 400 when monthlyAmount is zero (4 ms)
+      ✓ returns 400 when monthlyAmount is negative (4 ms)
+      ✓ returns 400 when monthlyAmount is not a number (4 ms)
+      ✓ returns 400 when chitsLeft is zero (5 ms)
+      ✓ returns 400 when chitsLeft is negative (4 ms)
+      ✓ returns 400 when chitsLeft is not an integer (4 ms)
+      ✓ returns 201 when extra unexpected fields are present (11 ms)
+      ✓ returns 400 for SQL injection/XSS in name (8 ms)
+      ✓ returns 201 for unicode/emoji in name (8 ms)
+
+PASS src/__tests__/truncateAll.test.js
+  truncateAll script
+    ✓ should truncate all tables and remove all users (271 ms)
+
+PASS src/__tests__/crudRouter.isolated.test.js
+  Isolated CRUD Router
+    ✓ GET /crud/list returns chit funds or error (66 ms)
+    ✓ POST /crud/create returns 400 for missing fields (8 ms)
+
+PASS src/__tests__/health.test.js
+  Health Route
+    ✓ should return 200 and ok/db status (30 ms)
+
+PASS src/__tests__/routes.integration.test.js
+  Backend Route Tests
+    ✓ GET /api/health should return 200 (29 ms)
+
+PASS src/__tests__/migration_logs_schema.test.js
+  Logs table schema
+    ✓ should have all required columns in Logs (25 ms)
+
+PASS src/__tests__/migration_memberships_schema.test.js
+  Memberships table schema
+    ✓ should have all required columns in Memberships (21 ms)
+
+PASS src/__tests__/Membership.model.test.js
+  Membership model
+    ✓ should not create membership without required fields (1 ms)
+    ✓ should create membership with required fields (5 ms)
+
+PASS src/__tests__/migration_schema.test.js
+  ChitFunds table schema
+    ✓ should have a description column in ChitFunds (20 ms)
+
+PASS src/__tests__/migration_users_schema.test.js
+  Users table schema
+    ✓ should have all required columns in Users (20 ms)
+
+PASS src/__tests__/User.model.test.js
+  User model
+    ✓ should not create user without required fields (2 ms)
+    ✓ should create user with required fields (36 ms)
+
+PASS src/__tests__/Log.model.test.js
+  Log model
+    ✓ should not create log without required fields (1 ms)
+    ✓ should create log with required fields (26 ms)
+
+PASS src/__tests__/ChitFund.model.test.js
+  ChitFund model
+    ✓ should not create chit fund without required fields (2 ms)
+    ✓ should create chit fund with required fields (36 ms)
+
+PASS src/__tests__/chitCrudController.regression.test.js
+  chitCrudController — unauthenticated regression
+    ✓ createChitFund returns 401 error envelope for unauthenticated (2 ms)
+    ✓ listUserChits returns 401 error envelope for unauthenticated (1 ms)
+
+PASS src/__tests__/chitCrudController.test.js
+  chitCrudController
+    createChitFund
+      ✓ should throw error for missing fields (1 ms)
+    listUserChits
+      ✓ should return array of chit funds for user (1 ms)
+
+PASS src/__tests__/chitAdminController.test.js
+  chitAdminController
+    handleRequestAction
+      ✓ should return 400 for missing params (1 ms)
+
+PASS src/__tests__/userController.test.js
+  userController
+    register
+      ✓ should return 400 for missing fields (1 ms)
+
+PASS src/__tests__/logToFile.test.js
+  logToFile utility
+    ✓ should write a log message to the log file (1 ms)
+    ✓ should stringify objects in log (1 ms)
+
+PASS src/__tests__/guid.test.js
+  guid utility
+    ✓ should generate a valid UUID v4 string (1 ms)
+
+Test Suites: 20 passed, 20 total
+Tests:       1 skipped, 64 passed, 65 total
+Snapshots:   0 total
+Time:        3.821 s, estimated 4 s
+Ran all test suites.
+
+> test:frontend
+> cd frontend && npx jest --config ./jest.config.cjs --detectOpenHandles --runInBand --verbose
+
+  console.log
+    [TEST][START] LoginForm renders login form and validates input
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    handleSubmit called, validation error: Username must be at least 3 characters.
+
+      at log (src/components/LoginForm.jsx:21:13)
+
+  console.log
+    handleSubmit called, validation error:
+
+      at log (src/components/LoginForm.jsx:21:13)
+
+  console.log
+    [TEST][END] LoginForm renders login form and validates input
+
+      at Object.log (jest.setup.js:9:11)
+
+  console.log
+    [TEST][START] LoginForm closes error popup when close button is clicked
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] LoginForm closes error popup when close button is clicked
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/LoginForm.test.jsx
+  LoginForm
+    ✓ renders login form and validates input (118 ms)
+    ✓ closes error popup when close button is clicked (17 ms)
+
+  console.log
+    [TEST][START] Join Chit Fund Flow renders join modal and submits join request
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] Join Chit Fund Flow renders join modal and submits join request
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/JoinChitFundFlow.test.jsx
+  Join Chit Fund Flow
+    ✓ renders join modal and submits join request (420 ms)
+
+  console.log
+    [TEST][START] ChitDetailsPage renders chit details and handles back button
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] ChitDetailsPage renders chit details and handles back button
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/ChitDetailsPage.test.jsx
+  ChitDetailsPage
+    ✓ renders chit details and handles back button (53 ms)
+
+  console.log
+    [TEST][START] RegisterForm file upload validates and accepts image file upload
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] RegisterForm file upload validates and accepts image file upload
+
+      at Object.log (jest.setup.js:9:11)
+
+  console.log
+    [TEST][START] RegisterForm file upload rejects non-image file upload
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] RegisterForm file upload rejects non-image file upload
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/RegisterFormFileUpload.test.jsx
+  RegisterForm file upload
+    ✓ validates and accepts image file upload (39 ms)
+    ✓ rejects non-image file upload (36 ms)
+
+  console.log
+    [TEST][START] Accessibility (a11y) checks ChitDetailsPage has no detectable a11y violations
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] Accessibility (a11y) checks ChitDetailsPage has no detectable a11y violations
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/ChitDetailsPage.a11y.test.jsx
+  Accessibility (a11y) checks
+    ✓ ChitDetailsPage has no detectable a11y violations (62 ms)
+
+  console.log
+    [TEST][START] Accessibility (a11y) checks App has no detectable a11y violations
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.error
+    A suspended resource finished loading inside a test, but the event was not wrapped in act(...).
+    
+    When testing, code that resolves suspended data should be wrapped into act(...):
+    
+    act(() => {
+      /* finish loading suspended data */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+      at pingSuspendedRoot (node_modules/react-dom/cjs/react-dom-client.development.js:18600:17)
+
+  console.error
+    A suspended resource finished loading inside a test, but the event was not wrapped in act(...).
+    
+    When testing, code that resolves suspended data should be wrapped into act(...):
+    
+    act(() => {
+      /* finish loading suspended data */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+      at pingSuspendedRoot (node_modules/react-dom/cjs/react-dom-client.development.js:18600:17)
+
+  console.error
+    An update to FrontendHealthCheck inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+      496 |     fetch('/api/health', { signal: controller.signal })
+      497 |       .then(r => r.ok ? r.json() : Promise.reject())
+    > 498 |       .then(data => setStatus(data.ok ? 'ok' : 'fail'))
+          |                     ^
+      499 |       .catch((err) => {
+      500 |         if (err.name !== 'AbortError') setStatus('fail');
+      501 |       });
+
+      at node_modules/react-dom/cjs/react-dom-client.development.js:18758:19
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom-client.development.js:18757:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom-client.development.js:16409:11)
+      at dispatchSetStateInternal (node_modules/react-dom/cjs/react-dom-client.development.js:9170:13)
+      at dispatchSetState (node_modules/react-dom/cjs/react-dom-client.development.js:9127:7)
+      at setStatus (src/App.jsx:498:21)
+
+  console.error
+    An update to App inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+      78 |       .then(r => r.ok ? r.json() : Promise.reject())
+      79 |       .then(data => {
+    > 80 |         setUser({ id: data.id, username: data.username });
+         |         ^
+      81 |         setPage('home');
+      82 |       })
+      83 |       .catch(() => {
+
+      at node_modules/react-dom/cjs/react-dom-client.development.js:18758:19
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom-client.development.js:18757:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom-client.development.js:16409:11)
+      at dispatchSetStateInternal (node_modules/react-dom/cjs/react-dom-client.development.js:9170:13)
+      at dispatchSetState (node_modules/react-dom/cjs/react-dom-client.development.js:9127:7)
+      at setUser (src/App.jsx:80:9)
+
+  console.error
+    An update to App inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+      79 |       .then(data => {
+      80 |         setUser({ id: data.id, username: data.username });
+    > 81 |         setPage('home');
+         |         ^
+      82 |       })
+      83 |       .catch(() => {
+      84 |         setUser(null);
+
+      at node_modules/react-dom/cjs/react-dom-client.development.js:18758:19
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-dom/cjs/react-dom-client.development.js:18757:9)
+      at scheduleUpdateOnFiber (node_modules/react-dom/cjs/react-dom-client.development.js:16409:11)
+      at dispatchSetStateInternal (node_modules/react-dom/cjs/react-dom-client.development.js:9170:13)
+      at dispatchSetState (node_modules/react-dom/cjs/react-dom-client.development.js:9127:7)
+      at setPage (src/App.jsx:81:9)
+
+  console.error
+    A suspended resource finished loading inside a test, but the event was not wrapped in act(...).
+    
+    When testing, code that resolves suspended data should be wrapped into act(...):
+    
+    act(() => {
+      /* finish loading suspended data */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+      at pingSuspendedRoot (node_modules/react-dom/cjs/react-dom-client.development.js:18600:17)
+
+  console.log
+    [TEST][END] Accessibility (a11y) checks App has no detectable a11y violations
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/App.a11y.test.jsx
+  Accessibility (a11y) checks
+    ✓ App has no detectable a11y violations (75 ms)
+
+  console.log
+    [TEST][START] Accessibility (a11y) checks RegisterForm has no detectable a11y violations
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] Accessibility (a11y) checks RegisterForm has no detectable a11y violations
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/RegisterForm.a11y.test.jsx
+  Accessibility (a11y) checks
+    ✓ RegisterForm has no detectable a11y violations (75 ms)
+
+  console.log
+    [TEST][START] Chit Fund Creation Flow renders chit creation modal and submits valid form
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] Chit Fund Creation Flow renders chit creation modal and submits valid form
+
+      at Object.log (jest.setup.js:9:11)
+
+FAIL src/__tests__/ChitCreationFlow.test.jsx
+  Chit Fund Creation Flow
+    ✕ renders chit creation modal and submits valid form (1056 ms)
+
+  ● Chit Fund Creation Flow › renders chit creation modal and submits valid form
+
+    Found multiple elements with the role "button" and name `/test chit/i`
+
+    Here are the matching elements:
+
+    Ignored nodes: comments, script, style
+    [36m<button[39m
+      [33maria-label[39m=[32m"View details for Test Chit"[39m
+      [33mclass[39m=[32m"chit-card"[39m
+      [33mstyle[39m=[32m"background: rgb(255, 255, 255); border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 20px; cursor: pointer; border: 1.5px solid rgb(25, 118, 210); transition: box-shadow 0.2s; text-align: center; outline: none; appearance: none; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 120px; min-width: 120px; max-width: 260px; max-height: 180px;"[39m
+      [33mtype[39m=[32m"button"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mstyle[39m=[32m"font-weight: 700; font-size: 22px; margin-bottom: 10px; color: rgb(26, 35, 126); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: 100%; text-align: center;"[39m
+        [33mtitle[39m=[32m"Test Chit"[39m
+      [36m>[39m
+        [0mTest Chit[0m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mstyle[39m=[32m"color: rgb(25, 118, 210); font-weight: 500; margin-bottom: 4px;"[39m
+      [36m>[39m
+        [0m₹[0m
+        [0m1000[0m
+        [0m per month[0m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mstyle[39m=[32m"color: rgb(85, 85, 85); margin-bottom: 4px;"[39m
+      [36m>[39m
+        [0mChits Left: [0m
+        [0m10[0m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mstyle[39m=[32m"color: rgb(136, 136, 136); font-size: 14px;"[39m
+      [36m>[39m
+        [0mRole: [0m
+        [36m<b>[39m
+          [0madmin[0m
+        [36m</b>[39m
+      [36m</div>[39m
+    [36m</button>[39m
+
+    Ignored nodes: comments, script, style
+    [36m<button[39m
+      [33maria-label[39m=[32m"View details for Test Chit"[39m
+      [33mclass[39m=[32m"chit-card"[39m
+      [33mstyle[39m=[32m"background: rgb(255, 255, 255); border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 20px; cursor: pointer; border: 1.5px solid rgb(25, 118, 210); transition: box-shadow 0.2s; text-align: center; outline: none; appearance: none; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 120px; min-width: 120px; max-width: 260px; max-height: 180px;"[39m
+      [33mtype[39m=[32m"button"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mstyle[39m=[32m"font-weight: 700; font-size: 22px; margin-bottom: 10px; color: rgb(26, 35, 126); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: 100%; text-align: center;"[39m
+        [33mtitle[39m=[32m"Test Chit"[39m
+      [36m>[39m
+        [0mTest Chit[0m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mstyle[39m=[32m"color: rgb(25, 118, 210); font-weight: 500; margin-bottom: 4px;"[39m
+      [36m>[39m
+        [0m₹[0m
+        [0m1000[0m
+        [0m per month[0m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mstyle[39m=[32m"color: rgb(85, 85, 85); margin-bottom: 4px;"[39m
+      [36m>[39m
+        [0mChits Left: [0m
+        [0m10[0m
+      [36m</div>[39m
+      [36m<div[39m
+        [33mstyle[39m=[32m"color: rgb(136, 136, 136); font-size: 14px;"[39m
+      [36m>[39m
+        [0mRole: [0m
+        [36m<b>[39m
+          [0madmin[0m
+        [36m</b>[39m
+      [36m</div>[39m
+    [36m</button>[39m
+
+    (If this is intentional, then use the `*AllBy*` variant of the query (like `queryAllByText`, `getAllByText`, or `findAllByText`)).
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"popup-overlay"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33maria-label[39m=[32m"Dialog"[39m
+              [33maria-modal[39m=[32m"true"[39m
+              [33mclass[39m=[32m"popup-box popup-success"[39m
+              [33mrole[39m=[32m"dialog"[39m
+              [33mtabindex[39m=[32m"-1"[39m
+            [36m>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"popup-message"[39m
+              [36m>[39m
+                [0mChit fund created successfully![0m
+              [36m</span>[39m
+              [36m<button[39m
+                [33maria-label[39m=[32m"Close"[39m
+                [33mclass[39m=[32m"popup-close"[39m
+              [36m>[39m
+                [0m×[0m
+              [36m</button>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33maria-label[39m=[32m"Backend Health Status"[39m
+            [33mstyle[39m=[32m"position: fixed; bottom: 10px; right: 10px; z-index: 1000; font-size: 13px; color: rgb(27, 126, 42); background: rgb(255, 255, 255); border-radius: 8px; padding: 4px 12px; box-shadow: 0 2px 8px #0001;"[39m
+          [36m>[39m
+            [0mBackend: [0m
+            [0mHealthy[0m
+          [36m</div>[39m
+          [36m<button[39m
+            [33maria-label[39m=[32m"Logout"[39m
+            [33mclass[39m=[32m"unified-btn logout-btn"[39m
+            [33mstyle[39m=[32m"position: fixed; top: 18px; right: 24px; z-index: 1200; min-width: 100px; padding: 10px 24px; font-weight: 700; font-size: 16px; background: rgb(255, 255, 255); color: rgb(25, 118, 210); border: 2px solid rgb(25, 118, 210); box-shadow: 0 2px 8px #1976d211; border-radius: 12px; transition: background 0.18s, color 0.18s, border 0.18s;"[39m
+            [33mtabindex[39m=[32m"0"[39m
+          [36m>[39m
+            [0mLogout[0m
+          [36m</button>[39m
+          [36m<main[39m
+            [33maria-label[39m=[32m"Chit Fund Dashboard"[39m
+            [33mclass[39m=[32m"main-content"[39m
+            [33mstyle[39m=[32m"outline: none;"[39m
+            [33mtabindex[39m=[32m"-1"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mstyle[39m=[32m"display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;"[39m
+            [36m>[39m
+              [36m<h2[39m
+                [33mstyle[39m=[32m"margin: 0px;"[39m
+              [36m>[39m
+                [0mYour Chit Funds[0m
+              [36m</h2>[39m
+              [36m<div>[39m
+                [36m<button[39m
+                  [33maria-label[39m=[32m"Create new chit fund"[39m
+                  [33mclass[39m=[32m"unified-btn"[39m
+                  [33mstyle[39m=[32m"margin-right: 8px;"[39m
+                [36m>[39m
+                  [0m+ Create Chit[0m
+                [36m</button>[39m
+                [36m<button[39m
+                  [33maria-label[39m=[32m"Join chit fund"[39m
+                  [33mclass[39m=[32m"unified-btn"[39m
+                [36m>[39m
+                  [0mJoin Chit Fund[0m
+                [36m</button>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"chit-grid"[39m
+              [33mstyle[39m=[32m"display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mstyle[39m=[32m"position: relative;"[39m
+              [36m>[39m
+                [36m<button[39m
+                  [33maria-label[39m=[32m"View details for Test Chit"[39m
+                  [33mclass[39m=[32m"chit-card"[39m
+                  [33mstyle[39m=[32m"background: rgb(255, 255, 255); border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 20px; cursor: pointer; border: 1.5px solid rgb(25, 118, 210); transition: box-shadow 0.2s; text-align: center; outline: none; appearance: none; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 120px; min-width: 120px; max-width: 260px; max-height: 180px;"[39m
+                  [33mtype[39m=[32m"button"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mstyle[39m=[32m"font-weight: 700; font-size: 22px; margin-bottom: 10px; color: rgb(26, 35, 126); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: 100%; text-align: center;"[39m
+                    [33mtitle[39m=[32m"Test Chit"[39m
+                  [36m>[39m
+                    [0mTest Chit[0m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mstyle[39m=[32m"color: rgb(25, 118, 210); font-weight: 500; margin-bottom: 4px;"[39m
+                  [36m>[39m
+                    [0m₹[0m
+                    [0m1000[0m
+                    [0m per month[0m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mstyle[39m=[32m"color: rgb(85, 85, 85); margin-bottom: 4px;"[39m
+                  [36m>[39m
+                    [0mChits Left: [0m
+                    [0m10[0m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mstyle[39m=[32m"color: rgb(136, 136, 136); font-size: 14px;"[39m
+                  [36m>[39m
+                    [0mRole: [0m
+                    [36m<b>[39m
+                      [0madmin[0m
+                    [36m</b>[39m
+                  [36m</div>[39m
+                [36m</button>[39m
+                [36m<button[39m
+                  [33maria-label[39m=[32m"Add session details"[39m
+                  [33mclass[39m=[32m"unified-btn"[39m
+                  [33mstyle[39m=[32m"position: absolute; top: 10px; right: 10px; z-index: 2; font-size: 12px; padding: 4px 10px; min-width: 0;"[39m
+                [36m>[39m
+                  [0m+ Add Session[0m
+                [36m</button>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mstyle[39m=[32m"position: relative;"[39m
+              [36m>[39m
+                [36m<button[39m
+                  [33maria-label[39m=[32m"View details for Test Chit"[39m
+                  [33mclass[39m=[32m"chit-card"[39m
+                  [33mstyle[39m=[32m"background: rgb(255, 255, 255); border-radius: 12px; box-shadow: 0 2px 8px #0001; padding: 20px; cursor: pointer; border: 1.5px solid rgb(25, 118, 210); transition: box-shadow 0.2s; text-align: center; outline: none; appearance: none; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 120px; min-width: 120px; max-width: 260px; max-height: 180px;"[39m
+                  [33mtype[39m=[32m"button"[39m
+                [36m>[39m
+                  [36m<div[39m
+                    [33mstyle[39m=[32m"font-weight: 700; font-size: 22px; margin-bottom: 10px; color: rgb(26, 35, 126); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: 100%; text-align: center;"[39m
+                    [33mtitle[39m=[32m"Test Chit"[39m
+                  [36m>[39m
+                    [0mTest Chit[0m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mstyle[39m=[32m"color: rgb(25, 118, 210); font-weight: 500; margin-bottom: 4px;"[39m
+                  [36m>[39m
+                    [0m₹[0m
+                    [0m1000[0m
+                    [0m per month[0m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mstyle[39m=[32m"color: rgb(85, 85, 85); margin-bottom: 4px;"[39m
+                  [36m>[39m
+                    [0mChits Left: [0m
+                    [0m10[0m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mstyle[39m=[32m"color: rgb(136, 136, 136); font-size: 14px;"[39m
+                  [36m>[39m
+                    [0mRole: [0m
+                    [36m<b>[39m
+                      [0madmin[0m
+                    [36m</b>[39m
+                  [36m</div>[39m
+                [36m</button>[39m
+                [36m<button[39m
+                  [33maria-label[39m=[32m"Add session details"[39m
+                  [33mclass[39m=[32m"unified-btn"[39m
+                  [33mstyle[39m=[32m"position: absolute; top: 10px; right: 10px; z-index: 2; font-size: 12px; padding: 4px 10px; min-width: 0;"[39m
+                [36m>[39m
+                  [0m+ Add Session[0m
+                [36m</button>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+          [36m</main>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      20 |     fireEvent.click(screen.getByRole('button', { name: /create chit fund/i }));
+      21 |     // Wait for the new chit card to appear in the grid (button with accessible name)
+    > 22 |     await waitFor(() => expect(screen.getByRole('button', { name: /test chit/i })).toBeInTheDocument());
+         |                  ^
+      23 |   });
+      24 | });
+      25 |
+
+      at waitForWrapper (node_modules/@testing-library/dom/dist/wait-for.js:163:27)
+      at src/__tests__/ChitCreationFlow.test.jsx:22:18
+      at Generator.call (src/__tests__/ChitCreationFlow.test.jsx:2:1)
+      at Generator._invoke [as next] (src/__tests__/ChitCreationFlow.test.jsx:2:1)
+      at asyncGeneratorStep (src/__tests__/ChitCreationFlow.test.jsx:2:1)
+      at asyncGeneratorStep (src/__tests__/ChitCreationFlow.test.jsx:2:1)
+
+  console.log
+    [TEST][START] Accessibility (a11y) checks LoginForm has no detectable a11y violations
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] Accessibility (a11y) checks LoginForm has no detectable a11y violations
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/LoginForm.a11y.test.jsx
+  Accessibility (a11y) checks
+    ✓ LoginForm has no detectable a11y violations (54 ms)
+
+  console.log
+    [TEST][START] Accessibility (a11y) checks ChitCard has no detectable a11y violations
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] Accessibility (a11y) checks ChitCard has no detectable a11y violations
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/ChitCard.a11y.test.jsx
+  Accessibility (a11y) checks
+    ✓ ChitCard has no detectable a11y violations (49 ms)
+
+  console.log
+    [TEST][START] Accessibility (a11y) checks Popup has no detectable a11y violations
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] Accessibility (a11y) checks Popup has no detectable a11y violations
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/Popup.a11y.test.jsx
+  Accessibility (a11y) checks
+    ✓ Popup has no detectable a11y violations (46 ms)
+
+  console.log
+    [TEST][START] FrontendHealthCheck shows healthy status when backend is up
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] FrontendHealthCheck shows healthy status when backend is up
+
+      at Object.log (jest.setup.js:9:11)
+
+  console.log
+    [TEST][START] FrontendHealthCheck shows unreachable status when backend is down
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] FrontendHealthCheck shows unreachable status when backend is down
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/FrontendHealthCheck.test.jsx
+  FrontendHealthCheck
+    ✓ shows healthy status when backend is up (33 ms)
+    ✓ shows unreachable status when backend is down (13 ms)
+
+  console.log
+    [TEST][START] RegisterForm renders and validates registration form
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] RegisterForm renders and validates registration form
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/RegisterForm.test.jsx
+  RegisterForm
+    ✓ renders and validates registration form (36 ms)
+
+  console.log
+    [TEST][START] App renders without crashing and shows Loading login
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] App renders without crashing and shows Loading login
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/App.test.jsx
+  App
+    ✓ renders without crashing and shows Loading login (36 ms)
+
+  console.log
+    [TEST][START] ChitGrid renders empty state
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] ChitGrid renders empty state
+
+      at Object.log (jest.setup.js:9:11)
+
+  console.log
+    [TEST][START] ChitGrid renders chit cards
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] ChitGrid renders chit cards
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/ChitGrid.test.jsx
+  ChitGrid
+    ✓ renders empty state (5 ms)
+    ✓ renders chit cards (7 ms)
+
+  console.log
+    [TEST][START] Popup does not render when open is false
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] Popup does not render when open is false
+
+      at Object.log (jest.setup.js:9:11)
+
+  console.log
+    [TEST][START] Popup renders message and calls onClose
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] Popup renders message and calls onClose
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/Popup.test.jsx
+  Popup
+    ✓ does not render when open is false (5 ms)
+    ✓ renders message and calls onClose (7 ms)
+
+  console.log
+    [TEST][START] ChitCard renders chit card details
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] ChitCard renders chit card details
+
+      at Object.log (jest.setup.js:9:11)
+
+  console.log
+    [TEST][START] ChitCard calls onClick when clicked
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] ChitCard calls onClick when clicked
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/ChitCard.test.jsx
+  ChitCard
+    ✓ renders chit card details (7 ms)
+    ✓ calls onClick when clicked (5 ms)
+
+  console.log
+    [TEST][START] logToBackend calls fetch with correct params and CSRF header
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] logToBackend calls fetch with correct params and CSRF header
+
+      at Object.log (jest.setup.js:9:11)
+
+  console.log
+    [TEST][START] logToBackend handles fetch error gracefully
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] logToBackend handles fetch error gracefully
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/logToBackend.test.js
+  logToBackend
+    ✓ calls fetch with correct params and CSRF header (9 ms)
+    ✓ handles fetch error gracefully (2 ms)
+
+  console.log
+    [TEST][START] import.meta.env polyfill loads
+
+      at Object.log (jest.setup.js:4:11)
+
+  console.log
+    [TEST][END] import.meta.env polyfill loads
+
+      at Object.log (jest.setup.js:9:11)
+
+PASS src/__tests__/jest.importMetaEnv.polyfill.js
+  ✓ import.meta.env polyfill loads (1 ms)
+
+Test Suites: 1 failed, 18 passed, 19 total
+Tests:       1 failed, 25 passed, 26 total
+Snapshots:   0 total
+Time:        4.537 s
+Ran all test suites.

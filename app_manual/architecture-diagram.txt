@@ -1,0 +1,32 @@
+
+Chit Fund Web App Architecture (Textual Diagram, Feb 2026)
+
+[User]
+   <->
+[Frontend: React SPA]
+   <->
+[JWT Session Layer (HTTP-only Cookie)]
+   <->
+[Backend: Node.js/Express API]
+   <->
+[PostgreSQL Database]
+
+Key Flows:
+- User <-> Frontend: HTTP (forms, dashboard, modals)
+- Frontend <-> Backend: REST API (auth, CRUD, logging, health, file upload)
+- Frontend <-> Backend: Polling (live auction, session updates; WebSocket planned)
+- Frontend <-> Backend: Logging (frontend logs to /api/log, backend logs to file)
+- Frontend <-> Backend: JWT session cookie for all authenticated requests
+- Backend <-> DB: Sequelize ORM (models, migrations)
+- Backend <-> /uploads/profile-pics: Static file serving (profile pictures)
+- [Sync-env.js Pipeline]: root .env -> frontend/.env before every build/start
+
+Supporting Components:
+- Logging subsystem: Frontend logs to backend, backend logs to file
+- Health: /api/health endpoint, frontend widget
+- Static: Profile pics served from /uploads/profile-pics
+- Sync-env.js: Ensures session timeout is consistent across backend/frontend
+
+Arrows are bidirectional to show request/response flows.
+
+See README.md for more details.

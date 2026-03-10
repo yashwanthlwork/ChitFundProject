@@ -1,0 +1,15 @@
+# Visual Architecture Diagram
+
+A visual diagram (PNG or SVG) can be added here to complement the textual architecture overview. 
+
+**How to add:**
+- Export your architecture diagram from draw.io, Lucidchart, Figma, or any diagram tool as PNG or SVG.
+- Place the file in this folder as `architecture-diagram.png` or `architecture-diagram.svg`.
+- Reference it in `README.md` and other docs for easy access.
+
+**Diagram should include:**
+- User, frontend, backend, database
+- Key flows (auth, CRUD, logging, health)
+- Supporting components (uploads, logging, health check)
+
+This placeholder ensures future maintainers know where to add or find the visual diagram.

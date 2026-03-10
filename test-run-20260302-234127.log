@@ -1,0 +1,314 @@
+
+> test:all
+> npm run test:backend && npm run test:frontend
+
+
+> test:backend
+> cd backend && npx jest --config ./jest.config.cjs --detectOpenHandles --runInBand --verbose
+
+(node:38493) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+FAIL src/__tests__/routes.test.js
+  Backend Routes
+    ✕ POST /api/chits/:chitId/join returns 401/422/500 for invalid chitId (5 ms)
+    ✕ GET /api/chits/all-memberships returns memberships (5 ms)
+    ✕ POST /api/chits/create returns 400 for missing fields (6 ms)
+    Chit CRUD Routes
+      ✕ POST /api/chits/crud/create returns 400/401 for missing fields or unauthorized (18 ms)
+      ✕ GET /api/chits/crud/list returns chit funds or error (5 ms)
+    Chit Admin Route
+      ✕ POST /api/chits/:chitId/requests/:membershipId returns error for invalid params (6 ms)
+    Log Route
+      ✕ POST /api/log returns 400 for missing message (6 ms)
+      ✕ GET /api/user/check-username returns available status (6 ms)
+      ✕ POST /api/user/register returns 400 for missing fields (10 ms)
+      ✕ POST /api/user/login returns 400 for missing fields (7 ms)
+    Health Route
+      ✓ GET /api/health returns 200 and ok/db status (6 ms)
+    Chit Fund Success Cases
+      ✕ POST /api/chits/create creates a chit fund (1 ms)
+      ✕ POST /api/chits/:chitId/join allows member to join
+
+  ● Backend Routes › Chit CRUD Routes › POST /api/chits/crud/create returns 400/401 for missing fields or unauthorized
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected value: 403
+    Received array: [400, 401, 422, 500]
+
+      37 |         .set('x-username', 'testuser'))
+      38 |         .send({});
+    > 39 |       expect([400, 401, 422, 500]).toContain(res.statusCode);
+         |                                    ^
+      40 |       if ([400, 401, 422, 500].includes(res.statusCode)) {
+      41 |         expect(res.body).toHaveProperty('error');
+      42 |       }
+
+      at Object.toContain (src/__tests__/routes.test.js:39:36)
+
+  ● Backend Routes › Chit CRUD Routes › GET /api/chits/crud/list returns chit funds or error
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected value: 404
+    Received array: [200, 401, 422, 500]
+
+      46 |         .get('/api/chits/crud/list')
+      47 |         .set('x-username', 'testuser');
+    > 48 |       expect([200, 401, 422, 500]).toContain(res.statusCode);
+         |                                    ^
+      49 |       if (res.statusCode === 200) {
+      50 |         expect(Array.isArray(res.body)).toBe(true);
+      51 |       } else if ([401, 422, 500].includes(res.statusCode)) {
+
+      at Object.toContain (src/__tests__/routes.test.js:48:36)
+
+  ● Backend Routes › Chit Admin Route › POST /api/chits/:chitId/requests/:membershipId returns error for invalid params
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected value: 403
+    Received array: [400, 401, 422, 500]
+
+      59 |         .post('/api/chits/invalid-id/requests/invalid-membership')
+      60 |         .set('x-username', 'testuser');
+    > 61 |       expect([400, 401, 422, 500]).toContain(res.statusCode);
+         |                                    ^
+      62 |     });
+      63 |   });
+      64 |   describe('Log Route', () => {
+
+      at Object.toContain (src/__tests__/routes.test.js:61:36)
+
+  ● Backend Routes › Log Route › POST /api/log returns 400 for missing message
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected value: 403
+    Received array: [400, 422, 500]
+
+      67 |         .post('/api/log'))
+      68 |         .send({ level: 'info' });
+    > 69 |       expect([400, 422, 500]).toContain(res.statusCode);
+         |                               ^
+      70 |       if ([400, 422, 500].includes(res.statusCode)) {
+      71 |         expect(res.body).toHaveProperty('success', false);
+      72 |         expect(res.body).toHaveProperty('error');
+
+      at Object.toContain (src/__tests__/routes.test.js:69:31)
+
+  ● Backend Routes › Log Route › GET /api/user/check-username returns available status
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected value: 404
+    Received array: [200, 400, 422, 500]
+
+      77 |         .get('/api/user/check-username')
+      78 |         .query({ username: 'testuser' });
+    > 79 |       expect([200, 400, 422, 500]).toContain(res.statusCode);
+         |                                    ^
+      80 |       if (res.statusCode === 200) {
+      81 |         expect(res.body).toHaveProperty('available');
+      82 |       } else if ([400, 422, 500].includes(res.statusCode)) {
+
+      at Object.toContain (src/__tests__/routes.test.js:79:36)
+
+  ● Backend Routes › Log Route › POST /api/user/register returns 400 for missing fields
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected value: 403
+    Received array: [400, 422, 500]
+
+      88 |         .post('/api/user/register'))
+      89 |         .send({});
+    > 90 |       expect([400, 422, 500]).toContain(res.statusCode);
+         |                               ^
+      91 |       if ([400, 422, 500].includes(res.statusCode)) {
+      92 |         expect(res.body).toHaveProperty('error');
+      93 |       }
+
+      at Object.toContain (src/__tests__/routes.test.js:90:31)
+
+  ● Backend Routes › Log Route › POST /api/user/login returns 400 for missing fields
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected value: 403
+    Received array: [400, 422, 500]
+
+       97 |         .post('/api/user/login'))
+       98 |         .send({});
+    >  99 |       expect([400, 422, 500]).toContain(res.statusCode);
+          |                               ^
+      100 |       if ([400, 422, 500].includes(res.statusCode)) {
+      101 |         expect(res.body).toHaveProperty('error');
+      102 |       }
+
+      at Object.toContain (src/__tests__/routes.test.js:99:31)
+
+  ● Backend Routes › POST /api/chits/:chitId/join returns 401/422/500 for invalid chitId
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected value: 403
+    Received array: [401, 422, 500]
+
+      107 |       .post('/api/chits/invalid-id/join')
+      108 |       .set('x-username', 'testuser'));
+    > 109 |     expect([401, 422, 500]).toContain(res.statusCode);
+          |                             ^
+      110 |   });
+      111 |   describe('Health Route', () => {
+      112 |     it('GET /api/health returns 200 and ok/db status', async () => {
+
+      at Object.toContain (src/__tests__/routes.test.js:109:29)
+
+  ● Backend Routes › GET /api/chits/all-memberships returns memberships
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected value: 404
+    Received array: [200, 401, 422, 500]
+
+      126 |       .get('/api/chits/all-memberships')
+      127 |       .set('x-username', 'testuser');
+    > 128 |     expect([200, 401, 422, 500]).toContain(res.statusCode);
+          |                                  ^
+      129 |   });
+      130 |   it('POST /api/chits/create returns 400 for missing fields', async () => {
+      131 |     const res = await withCsrf(request(server)
+
+      at Object.toContain (src/__tests__/routes.test.js:128:34)
+
+  ● Backend Routes › POST /api/chits/create returns 400 for missing fields
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected value: 403
+    Received array: [400, 401, 422, 500]
+
+      133 |       .set('x-username', 'testuser'))
+      134 |       .send({});
+    > 135 |     expect([400, 401, 422, 500]).toContain(res.statusCode);
+          |                                  ^
+      136 |     if ([400, 401, 422, 500].includes(res.statusCode)) {
+      137 |       expect(res.body).toHaveProperty('success', false);
+      138 |       expect(res.body).toHaveProperty('error');
+
+      at Object.toContain (src/__tests__/routes.test.js:135:34)
+
+  ● Backend Routes › Chit Fund Success Cases › POST /api/chits/create creates a chit fund
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected value: 403
+    Received array: [201, 400, 401, 422, 500]
+
+      154 |           otp: '123456'
+      155 |         });
+    > 156 |       expect([201, 400, 401, 422, 500]).toContain(res.statusCode);
+          |                                         ^
+      157 |       const loginRes = await request(server)
+      158 |         .post('/api/user/login')
+      159 |         .send({ username: 'adminuser', password: 'adminpass' });
+
+      at Object.toContain (src/__tests__/routes.test.js:156:41)
+
+  ● Backend Routes › Chit Fund Success Cases › POST /api/chits/:chitId/join allows member to join
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected value: 403
+    Received array: [201, 400, 401, 422, 500]
+
+      154 |           otp: '123456'
+      155 |         });
+    > 156 |       expect([201, 400, 401, 422, 500]).toContain(res.statusCode);
+          |                                         ^
+      157 |       const loginRes = await request(server)
+      158 |         .post('/api/user/login')
+      159 |         .send({ username: 'adminuser', password: 'adminpass' });
+
+      at Object.toContain (src/__tests__/routes.test.js:156:41)
+
+PASS src/__tests__/truncateAll.test.js
+  truncateAll script
+    ✓ should truncate all tables and remove all users (271 ms)
+
+PASS src/__tests__/health.test.js
+  Health Route
+    ✓ should return 200 and ok/db status (39 ms)
+
+PASS src/__tests__/routes.integration.test.js
+  Backend Route Tests
+    ✓ GET /api/health should return 200 (36 ms)
+
+PASS src/__tests__/migration_schema.test.js
+  ChitFunds table schema
+    ✓ should have a description column in ChitFunds (23 ms)
+
+PASS src/__tests__/migration_memberships_schema.test.js
+  Memberships table schema
+    ✓ should have all required columns in Memberships (21 ms)
+
+PASS src/__tests__/Membership.model.test.js
+  Membership model
+    ✓ should not create membership without required fields (2 ms)
+    ✓ should create membership with required fields (4 ms)
+
+PASS src/__tests__/migration_users_schema.test.js
+  Users table schema
+    ✓ should have all required columns in Users (22 ms)
+
+PASS src/__tests__/migration_logs_schema.test.js
+  Logs table schema
+    ✓ should have all required columns in Logs (21 ms)
+
+PASS src/__tests__/chitCrudController.test.js
+  chitCrudController
+    createChitFund
+      ✓ should throw error for missing fields (27 ms)
+    listUserChits
+      ✓ should return array of chit funds for user
+
+PASS src/__tests__/ChitFund.model.test.js
+  ChitFund model
+    ✓ should not create chit fund without required fields (1 ms)
+    ✓ should create chit fund with required fields (27 ms)
+
+PASS src/__tests__/User.model.test.js
+  User model
+    ✓ should not create user without required fields (1 ms)
+    ✓ should create user with required fields (25 ms)
+
+PASS src/__tests__/Log.model.test.js
+  Log model
+    ✓ should not create log without required fields (2 ms)
+    ✓ should create log with required fields (34 ms)
+
+PASS src/__tests__/userController.test.js
+  userController
+    register
+      ✓ should return 400 for missing fields (2 ms)
+
+PASS src/__tests__/chitAdminController.test.js
+  chitAdminController
+    handleRequestAction
+      ✓ should return 400 for missing params (1 ms)
+
+PASS src/__tests__/logToFile.test.js
+  logToFile utility
+    ✓ should write a log message to the log file (1 ms)
+    ✓ should stringify objects in log (1 ms)
+
+PASS src/__tests__/guid.test.js
+  guid utility
+    ✓ should generate a valid UUID v4 string
+
+Test Suites: 1 failed, 16 passed, 17 total
+Tests:       12 failed, 23 passed, 35 total
+Snapshots:   0 total
+Time:        2.336 s, estimated 3 s
+Ran all test suites.

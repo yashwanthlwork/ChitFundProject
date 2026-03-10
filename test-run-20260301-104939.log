@@ -1,0 +1,35 @@
+
+> test:all
+> npm run test:backend && npm run test:frontend
+
+
+> test:backend
+> cd backend && npx jest --config ./jest.config.js --detectOpenHandles --runInBand --verbose
+
+(node:87146) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS tests/routes.test.js
+  Backend Route Tests
+    ✓ GET /api/health should return 200 (84 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.559 s, estimated 1 s
+Ran all test suites.
+
+> test:frontend
+> cd frontend && npx jest --config ./jest.config.js --detectOpenHandles --runInBand --verbose
+
+ReferenceError: module is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/yashwanth/Downloads/Project/frontend/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/yashwanth/Downloads/Project/frontend/jest.config.js:1:1
+    at ModuleJobSync.runSync (node:internal/modules/esm/module_job:534:37)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:382:47)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1620:24)
+    at Module._compile (node:internal/modules/cjs/loader:1785:5)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1934:10)
+    at Module.load (node:internal/modules/cjs/loader:1524:32)
+    at Module._load (node:internal/modules/cjs/loader:1326:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)

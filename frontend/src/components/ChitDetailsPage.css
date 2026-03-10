@@ -1,0 +1,104 @@
+.chit-details-page {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #0002;
+  margin: 40px 5vw 0 5vw;
+  padding: 32px 40px;
+  max-width: 900px;
+  width: 100%;
+  color: #1a237e;
+}
+.chit-details-title {
+  font-size: 2rem;
+  color: #1976d2;
+  margin-bottom: 18px;
+}
+.chit-details-overview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 18px;
+  font-size: 1.08rem;
+}
+.chit-details-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 18px;
+  font-size: 1.08rem;
+  background: #f7fbff;
+  border-radius: 12px;
+  padding: 12px 18px;
+}
+.chit-details-table-container {
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+.chit-details-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.01rem;
+  background: #f7fbff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.chit-details-table th, .chit-details-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #e3f0ff;
+  text-align: left;
+}
+.chit-details-table th {
+  background: #e3f0ff;
+  color: #1976d2;
+  font-weight: 700;
+}
+.chit-details-table tr.completed {
+  background: #e8f5e9;
+}
+.chit-details-table tr.pending {
+  background: #fffde7;
+}
+.chit-details-members {
+  list-style: disc inside;
+  margin: 0 0 0 18px;
+  padding: 0;
+  font-size: 1.05rem;
+}
+.chit-details-back {
+  margin-bottom: 18px;
+  background: #fff;
+  color: #1976d2;
+  border: 2px solid #1976d2;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 12px;
+  padding: 8px 18px;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+}
+.chit-details-back:hover {
+  background: #1976d2;
+  color: #fff;
+}
+.chit-details-loading {
+  padding: 32px;
+  text-align: center;
+  color: #1976d2;
+  font-size: 1.2rem;
+}
+@media (max-width: 700px) {
+  .chit-details-page {
+    padding: 18px 4vw;
+  }
+  .chit-details-title {
+    font-size: 1.3rem;
+  }
+  .chit-details-overview, .chit-details-stats {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.98rem;
+  }
+  .chit-details-table th, .chit-details-table td {
+    font-size: 0.97rem;
+    padding: 6px 6px;
+  }
+}

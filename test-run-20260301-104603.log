@@ -1,0 +1,32 @@
+
+> test:all
+> npm run test:backend && npm run test:frontend
+
+
+> test:backend
+> cd backend && npx jest --config ./jest.config.js --detectOpenHandles --runInBand --verbose
+
+(node:85871) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS tests/routes.test.js
+  Backend Route Tests
+    ✓ GET /api/health should return 200 (74 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.796 s, estimated 1 s
+Ran all test suites.
+
+> test:frontend
+> cd frontend && npx jest --config ./jest.config.js --detectOpenHandles --runInBand --verbose
+
+Error: Can't find a root directory while resolving a config file path.
+Provided path to resolve: ./jest.config.js
+cwd: /Users/yashwanth/Downloads/Project/frontend
+    at resolveConfigPath (/Users/yashwanth/.npm/_npx/b8d86e6551a4f492/node_modules/jest-config/build/index.js:2462:11)
+    at readInitialOptions (/Users/yashwanth/.npm/_npx/b8d86e6551a4f492/node_modules/jest-config/build/index.js:1138:55)
+    at readConfig (/Users/yashwanth/.npm/_npx/b8d86e6551a4f492/node_modules/jest-config/build/index.js:918:13)
+    at readConfigs (/Users/yashwanth/.npm/_npx/b8d86e6551a4f492/node_modules/jest-config/build/index.js:1168:32)
+    at runCLI (/Users/yashwanth/.npm/_npx/b8d86e6551a4f492/node_modules/@jest/core/build/index.js:1407:43)
+    at Object.run (/Users/yashwanth/.npm/_npx/b8d86e6551a4f492/node_modules/jest-cli/build/index.js:656:34)
